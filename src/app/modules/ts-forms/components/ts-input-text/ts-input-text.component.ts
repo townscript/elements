@@ -1,0 +1,43 @@
+import {Component, EventEmitter, forwardRef, Input, OnInit, Output} from '@angular/core';
+import {config, TsControlValueAccessor} from '@base/core';
+import {NG_VALUE_ACCESSOR} from '@angular/forms';
+
+@Component({
+  selector: 'ts-input-text',
+  templateUrl: './ts-input-text.component.html',
+  styleUrls: ['./ts-input-text.component.scss'],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => TsInputTextComponent),
+    multi: true
+  }]
+})
+export class TsInputTextComponent extends TsControlValueAccessor implements OnInit {
+
+  @Input() placeholder = 'Placeholder';
+  floatLabel = config.floatLabel;
+  @Input() required = false;
+  @Input() name: string;
+  private _inputTextValue: string;
+
+  ngOnInit() {
+  }
+
+  get inputTextValue(): string {
+    return this._inputTextValue;
+  }
+
+  set inputTextValue(val: string) {
+    this._inputTextValue = val;
+    this.onChangePropagation(val);
+  }
+
+  writeValue(value: string): void {
+    this.inputTextValue = value;
+  }
+
+  onBlur = () => {
+    this.onTouchedPropagation(this.inputTextValue);
+  }
+
+}

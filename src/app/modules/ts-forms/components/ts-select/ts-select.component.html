@@ -1,0 +1,8 @@
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
+  <mat-select [placeholder]="placeholder" [required]="required" [(ngModel)]="selectValue" [name]="name" (blur)="onBlur()">
+    <mat-option>--</mat-option>
+    <mat-option *ngFor="let option of options" [value]="option.value">
+      {{option.text}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
