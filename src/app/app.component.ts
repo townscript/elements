@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   myName = '';
   myGender = '';
   options: Array<Option> = [];
+  myCard = '';
 
   constructor () {
     let option: Option = {text: 'Male', value: 'Male'};

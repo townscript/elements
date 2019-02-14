@@ -1,15 +1,53 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, forwardRef, Input, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {config, TsControlValueAccessor} from '@base/core';
+import {CreditCardValidator} from 'angular-cc-library';
 
 @Component({
-  selector: 'app-ts-input-card',
+  selector: 'ts-input-card',
   templateUrl: './ts-input-card.component.html',
-  styleUrls: ['./ts-input-card.component.scss']
+  styleUrls: ['./ts-input-card.component.scss'],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => TsInputCardComponent),
+    multi: true
+  }]
 })
-export class TsInputCardComponent implements OnInit {
+export class TsInputCardComponent extends TsControlValueAccessor implements OnInit  {
 
-  constructor() { }
+  @Input() placeholder = 'Placeholder';
+  floatLabel = config.floatLabel;
+  @Input() required = false;
+  @Input() name: string;
+  private _inputCardValue: string;
+  form: FormGroup;
+
+  constructor(private _fb: FormBuilder) {
+    super();
+  }
+
+  get inputCardValue(): string {
+    return this._inputCardValue;
+  }
+
+  set inputCardValue(value: string) {
+    this._inputCardValue = value;
+    this.onChangePropagation(value);
+  }
 
   ngOnInit() {
+    this.form = this._fb.group({
+      creditCard: ['', [<any>CreditCardValidator.validateCCNumber]]
+    });
+  }
+
+  writeValue(value: string): void {
+    console.log(value);
+    this.inputCardValue = value;
+  }
+
+  onBlur = () => {
+    this.onTouchedPropagation(this.inputCardValue);
   }
 
 }
