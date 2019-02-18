@@ -42,12 +42,19 @@ export class TsInputCardComponent extends TsControlValueAccessor implements OnIn
   }
 
   writeValue(value: string): void {
-    console.log(value);
-    this.inputCardValue = value;
+    this.form.setValue({'creditCard': value});
+    this.onChange();
   }
 
   onBlur = () => {
     this.onTouchedPropagation(this.inputCardValue);
   }
 
+  onChange = () => {
+    if (this.form.get('creditCard').valid) {
+      this.inputCardValue = this.form.get('creditCard').value;
+    } else {
+      this.inputCardValue = undefined;
+    }
+  }
 }
