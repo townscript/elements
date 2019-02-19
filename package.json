@@ -1,6 +1,6 @@
 {
-  "name": "elements",
-  "version": "0.0.0",
+  "name": "@townscript/elements",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/cdk": "^6.2.0",
@@ -47,5 +46,24 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
-  }
+  },
+  "description": "Townscript material html angular elements",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/townscript/elements.git"
+  },
+  "keywords": [
+    "form",
+    "elements",
+    "inputs",
+    "material",
+    "townscript"
+  ],
+  "author": "“Sushant <“sushant@townscript.com”>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/townscript/elements/issues"
+  },
+  "homepage": "https://github.com/townscript/elements#readme"
 }
