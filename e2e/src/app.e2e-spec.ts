@@ -1,14 +1,34 @@
 import { AppPage } from './app.po';
 
-describe('workspace-project App', () => {
+describe('Townscript Elements App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
+    page.navigateTo();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to elements!');
+  it('should ask name', () => {
+    expect(page.getNameElement()).toBeDefined();
+  });
+
+  it('should ask gender', () => {
+    expect(page.getGenderElement()).toBeDefined();
+  });
+
+  it('should ask card number', () => {
+    expect(page.getCardElement()).toBeDefined();
+  });
+
+  it('should ask card expiry', () => {
+    expect(page.getExpiryElement()).toBeDefined();
+  });
+
+  it('should ask card cvc', () => {
+    expect(page.getCVCElement()).toBeDefined();
+  });
+
+  it('should display proceed button', () => {
+    expect(page.getButtonElement()).toBeDefined();
   });
 });
