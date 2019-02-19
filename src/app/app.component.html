@@ -1,4 +1,4 @@
-<form #formElement="ngForm" novalidate autocomplete="off">
+<form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
   <ts-input-text [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName" [name]="'name'"></ts-input-text>
   <p>Value: {{myName}}</p>
 
@@ -13,6 +13,8 @@
 
   <ts-input-cvc [placeholder]="'Please enter card CVC'" [required]="true" [(ngModel)]="myCVC" [name]="'cvc'"></ts-input-cvc>
   <p>Value: {{myCVC}}</p>
+
+  <ts-button text="Proceed" [disabled]="formElement.invalid"></ts-button>
 
   <p>Form Valid: {{formElement.valid}}, Touched: {{formElement.touched}}</p>
 </form>
