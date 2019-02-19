@@ -9,7 +9,7 @@ import {
   TsInputExpiryComponent,
   TsInputCvcComponent,
   TsButtonComponent
-} from '@base/modules/ts-forms/components';
+} from './components';
 import {CreditCardDirectivesModule} from 'angular-cc-library';
 
 @NgModule({

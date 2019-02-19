@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Option} from '@base/modules/ts-forms/components';
+import {Option} from './modules/ts-forms/components';
 
 @Component({
   selector: 'app-root',

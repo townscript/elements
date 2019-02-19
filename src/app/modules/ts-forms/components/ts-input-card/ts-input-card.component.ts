@@ -1,6 +1,6 @@
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {config, TsControlValueAccessor} from '@base/core';
+import {config, TsControlValueAccessor} from '../../../../core';
 import {CreditCardValidator} from 'angular-cc-library';
 
 @Component({

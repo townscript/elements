@@ -1,5 +1,5 @@
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {config, TsControlValueAccessor} from '@base/core';
+import {config, TsControlValueAccessor} from '../../../../core';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
