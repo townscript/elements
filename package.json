@@ -1,14 +1,16 @@
 {
   "name": "@townscript/elements",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run packagr",
+    "postbuild": "scss-bundle -c scss-bundle.config.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "ng-packagr -p ng-package.json"
+    "packagr": "ng-packagr -p ng-package.json",
+    "publish": "npm publish dist"
   },
   "private": false,
   "dependencies": {
@@ -46,6 +48,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^4.7.1",
     "protractor": "~5.4.0",
+    "scss-bundle": "^2.5.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
