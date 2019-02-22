@@ -5,7 +5,9 @@ import {NG_VALUE_ACCESSOR} from '@angular/forms';
 @Component({
   selector: 'ts-select',
   templateUrl: './ts-select.component.html',
-  styleUrls: ['./ts-select.component.scss'],
+  styleUrls: [
+    // './ts-select.component.scss'
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsSelectComponent),

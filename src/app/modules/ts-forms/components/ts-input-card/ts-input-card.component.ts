@@ -6,7 +6,9 @@ import {CreditCardValidator} from 'angular-cc-library';
 @Component({
   selector: 'ts-input-card',
   templateUrl: './ts-input-card.component.html',
-  styleUrls: ['./ts-input-card.component.scss'],
+  styleUrls: [
+    // './ts-input-card.component.scss'
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsInputCardComponent),

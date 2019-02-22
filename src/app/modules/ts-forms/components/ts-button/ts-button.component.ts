@@ -3,7 +3,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 @Component({
   selector: 'ts-button',
   templateUrl: './ts-button.component.html',
-  styleUrls: ['./ts-button.component.scss']
+  styleUrls: [
+    // './ts-button.component.scss'
+  ]
 })
 export class TsButtonComponent implements OnInit {
 

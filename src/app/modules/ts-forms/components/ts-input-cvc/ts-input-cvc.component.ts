@@ -5,7 +5,9 @@ import {config, TsControlValueAccessor} from '../../../../core';
 @Component({
   selector: 'ts-input-cvc',
   templateUrl: './ts-input-cvc.component.html',
-  styleUrls: ['./ts-input-cvc.component.scss'],
+  styleUrls: [
+    // './ts-input-cvc.component.scss'
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsInputCvcComponent),

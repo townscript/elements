@@ -5,7 +5,9 @@ import {NG_VALUE_ACCESSOR} from '@angular/forms';
 @Component({
   selector: 'ts-input-text',
   templateUrl: './ts-input-text.component.html',
-  styleUrls: ['./ts-input-text.component.scss'],
+  styleUrls: [
+    // './ts-input-text.component.scss'
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsInputTextComponent),

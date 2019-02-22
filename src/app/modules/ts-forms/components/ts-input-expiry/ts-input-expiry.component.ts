@@ -6,7 +6,9 @@ import {CreditCardValidator} from 'angular-cc-library';
 @Component({
   selector: 'ts-input-expiry',
   templateUrl: './ts-input-expiry.component.html',
-  styleUrls: ['./ts-input-expiry.component.scss'],
+  styleUrls: [
+    // './ts-input-expiry.component.scss'
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsInputExpiryComponent),
