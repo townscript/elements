@@ -72,3 +72,8 @@ $ts-app-accent:  mat-palette($ts-pink, 500, 900, A100);
 $ts-app-warn:    mat-palette($mat-deep-orange);
 $ts-app-theme: mat-light-theme($ts-app-primary, $ts-app-accent, $ts-app-warn);
 @include angular-material-theme($ts-app-theme);
+
+$mat-form-field-width: inherit !default;
+mat-form-field{
+  width: $mat-form-field-width;
+}
