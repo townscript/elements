@@ -14,6 +14,10 @@
   <ts-input-cvc [placeholder]="'Please enter card CVC'" [required]="true" [(ngModel)]="myCVC" [name]="'cvc'"></ts-input-cvc>
   <p>Value: {{myCVC}}</p>
 
+  <ts-box-radio name="myRadio" value="actionValue1" text="Action 1" color="purple" [(ngModel)]="myRadio" [required]="true" imageSource="favicon.ico"></ts-box-radio>
+  <ts-box-radio name="myRadio" value="actionValue2" text="Action 2" color="purple" [(ngModel)]="myRadio" [required]="true" imageSource="favicon.ico"></ts-box-radio>
+  <p>Value: {{myRadio}}</p>
+
   <ts-button text="Proceed" [disabled]="formElement.invalid"></ts-button>
 
   <p>Form Valid: {{formElement.valid}}, Touched: {{formElement.touched}}</p>

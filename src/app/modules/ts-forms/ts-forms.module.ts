@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatRippleModule, MatSelectModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   TsInputTextComponent,
@@ -8,7 +8,8 @@ import {
   TsInputCardComponent,
   TsInputExpiryComponent,
   TsInputCvcComponent,
-  TsButtonComponent
+  TsButtonComponent,
+  TsBoxRadioComponent
 } from './components/index';
 import {CreditCardDirectivesModule} from 'angular-cc-library';
 
@@ -20,7 +21,8 @@ import {CreditCardDirectivesModule} from 'angular-cc-library';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    CreditCardDirectivesModule
+    CreditCardDirectivesModule,
+    MatRippleModule
   ],
   declarations: [
     TsInputTextComponent,
@@ -28,7 +30,8 @@ import {CreditCardDirectivesModule} from 'angular-cc-library';
     TsInputCardComponent,
     TsInputExpiryComponent,
     TsInputCvcComponent,
-    TsButtonComponent
+    TsButtonComponent,
+    TsBoxRadioComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -36,7 +39,8 @@ import {CreditCardDirectivesModule} from 'angular-cc-library';
     TsInputCardComponent,
     TsInputExpiryComponent,
     TsInputCvcComponent,
-    TsButtonComponent
+    TsButtonComponent,
+    TsBoxRadioComponent
   ]
 })
 export class TsFormsModule { }

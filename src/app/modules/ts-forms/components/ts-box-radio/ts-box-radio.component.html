@@ -1,0 +1,9 @@
+<div class="box-radio" [ngClass]="{'disabled': disabled, 'mat-elevation-z2': !disabled}"
+     (click)="!disabled && (selectedValue = value)" matRipple [matRippleDisabled]="disabled" [style.borderColor]="color">
+
+  <img [src]="imageSource" [alt]="text" class="box-radio__image">
+  <div class="box-radio__text" [style.color]="color">{{text}}</div>
+  <div class="box-radio__check" [ngClass]="{'active': selectedValue == value}">
+    <div class="circle" [style.backgroundColor]="color"></div>
+  </div>
+</div>
