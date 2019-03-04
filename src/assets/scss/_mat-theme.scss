@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
-@include mat-core();
+$ts-typography: mat-typography-config($font-family: '"ProductSans", sans-serif;');
+@include mat-core($ts-typography);
 
 $ts-purple: (
   50: #EDE7F2,
