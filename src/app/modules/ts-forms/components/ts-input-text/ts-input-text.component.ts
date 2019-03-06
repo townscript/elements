@@ -20,6 +20,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;
+  @Input() pattern = '.*';
   private _inputTextValue: string;
 
   ngOnInit() {
@@ -31,7 +32,11 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
 
   set inputTextValue(val: string) {
     this._inputTextValue = val;
-    this.onChangePropagation(val);
+    if (val && val.match(this.pattern)) {
+      this.onChangePropagation(val);
+    } else {
+      this.onChangePropagation('');
+    }
   }
 
   writeValue(value: string): void {
