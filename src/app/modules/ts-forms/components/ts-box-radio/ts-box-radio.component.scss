@@ -10,6 +10,8 @@
   padding: 10px 5px;
   border: 1px solid #999999;
   cursor: pointer;
+  -webkit-transition: transform ease .2s;
+  transition: transform ease-in .2s;
   &__image{
     width: 30px;
     height: 30px;
@@ -31,9 +33,6 @@
     transform: rotate(45deg);
     -webkit-transition: opacity ease .2s;
     transition: opacity ease-in .2s;
-    &.active{
-      opacity: 1;
-    }
     .circle{
       position: absolute;
       width:18px;
@@ -60,6 +59,14 @@
         top: 10px;
         content: ' ';
       }
+    }
+  }
+  &.active{
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Chrome, Safari, Opera */
+    transform: scale(1.05);
+    .box-radio__check{
+      opacity: 1;
     }
   }
 }
