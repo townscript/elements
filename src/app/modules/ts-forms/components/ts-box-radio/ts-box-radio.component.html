@@ -1,5 +1,5 @@
 <div class="box-radio" [ngClass]="{'disabled': disabled, 'mat-elevation-z2': !disabled}"
-     (click)="!disabled && (selectedValue = value)" matRipple [matRippleDisabled]="disabled" [style.borderColor]="color">
+     (click)="!disabled && (selectedValue = value)" matRipple [matRippleDisabled]="disabled">
 
   <img [src]="imageSource" [alt]="text" class="box-radio__image">
   <div class="box-radio__text" [style.color]="color">{{text}}</div>

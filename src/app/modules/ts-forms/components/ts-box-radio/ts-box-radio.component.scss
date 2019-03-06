@@ -36,10 +36,10 @@
     }
     .circle{
       position: absolute;
-      width:22px;
-      height:22px;
+      width:18px;
+      height:18px;
       background-color: #999999;
-      border-radius:11px;
+      border-radius:9px;
       left:0;
       top:0;
       &:before{
@@ -47,17 +47,17 @@
         width:3px;
         height:9px;
         background-color:#fff;
-        left:11px;
-        top:6px;
+        left:9px;
+        top:4px;
         content: ' ';
       }
       &:after{
         position: absolute;
-        width:3px;
-        height:3px;
-        background-color:#fff;
-        left:8px;
-        top:12px;
+        width: 4px;
+        height: 3px;
+        background-color: #fff;
+        left: 6px;
+        top: 10px;
         content: ' ';
       }
     }

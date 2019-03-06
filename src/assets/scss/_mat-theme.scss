@@ -75,6 +75,9 @@ $ts-app-theme: mat-light-theme($ts-app-primary, $ts-app-accent, $ts-app-warn);
 @include angular-material-theme($ts-app-theme);
 
 $mat-form-field-width: inherit !default;
-mat-form-field{
+.mat-form-field{
   width: $mat-form-field-width;
+  &-appearance-legacy .mat-form-field-underline{
+    background-color: rgba(0, 0, 0, 0.22);
+  }
 }
