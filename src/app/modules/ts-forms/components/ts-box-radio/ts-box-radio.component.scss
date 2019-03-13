@@ -8,10 +8,20 @@
   position: relative;
   user-select: none;
   padding: 10px 5px;
-  border: 1px solid #999999;
+  border: 1px solid rgba(0,0,0,.22);
   cursor: pointer;
-  -webkit-transition: transform ease .2s;
-  transition: transform ease-in .2s;
+  -webkit-transition: all ease .2s;
+  -moz-transition: all ease .2s;
+  transition: all ease-in .2s;
+  &:not(.disabled):hover{
+    background-color: rgba(0,0,0,0.05);
+  }
+  &.shadow{
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    &.active{
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    }
+  }
   &__image{
     width: 30px;
     height: 30px;
@@ -32,6 +42,7 @@
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
     -webkit-transition: opacity ease .2s;
+    -moz-transition: opacity ease-in .2s;
     transition: opacity ease-in .2s;
     .circle{
       position: absolute;
