@@ -15,6 +15,8 @@ export class TsButtonComponent implements OnInit {
   text: string;
   @Input()
   disabled = false;
+  @Input()
+  width = 'inherit';
   @Output()
   click = new EventEmitter<Event>();
 

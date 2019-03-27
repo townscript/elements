@@ -1,4 +1,29 @@
 @import '~@angular/material/theming';
+// Re defining disable button color
+@mixin _mat-button-theme-property($theme, $property, $hue) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  &.mat-primary {
+    #{$property}: mat-color($primary, $hue);
+  }
+  &.mat-accent {
+    #{$property}: mat-color($accent, $hue);
+  }
+  &.mat-warn {
+    #{$property}: mat-color($warn, $hue);
+  }
+
+  &.mat-primary, &.mat-accent, &.mat-warn, &[disabled] {
+    &[disabled] {
+      opacity: 0.8;
+    }
+  }
+}
+
 $ts-typography: mat-typography-config($font-family: '"Open Sans", sans-serif;');
 @include mat-core($ts-typography);
 
@@ -72,7 +97,13 @@ $ts-app-primary: mat-palette($ts-purple);
 $ts-app-accent:  mat-palette($ts-pink, 500, 900, A100);
 $ts-app-warn:    mat-palette($mat-deep-orange);
 $ts-app-theme: mat-light-theme($ts-app-primary, $ts-app-accent, $ts-app-warn);
-@include angular-material-theme($ts-app-theme);
+
+@include mat-core-theme($ts-app-theme);
+@include mat-button-theme($ts-app-theme);
+@include mat-form-field-theme($ts-app-theme);
+@include mat-input-theme($ts-app-theme);
+@include mat-progress-spinner-theme($ts-app-theme);
+@include mat-select-theme($ts-app-theme);
 
 $mat-form-field-width: inherit !default;
 .mat-form-field{
