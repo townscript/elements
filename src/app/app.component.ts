@@ -9,7 +9,7 @@ import {Option} from './modules/ts-forms/components';
 export class AppComponent implements OnInit {
   title = 'elements';
   myName = '';
-  myGender = '';
+  myGender: Option;
   options: Array<Option> = [];
   myCard = '';
   myExpiry = '';
@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     this.options.push(option);
     option = {text: 'Female', value: 'Female'};
     this.options.push(option);
+    this.myGender = option;
   }
 
   ngOnInit() {
