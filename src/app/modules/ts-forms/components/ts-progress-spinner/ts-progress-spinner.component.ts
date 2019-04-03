@@ -8,6 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TsProgressSpinnerComponent implements OnInit {
 
   @Input() diameter = 50;
+  @Input() mode = 'indeterminate';
+  @Input() value = 0;
   constructor() { }
 
   ngOnInit() {
