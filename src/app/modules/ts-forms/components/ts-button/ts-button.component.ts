@@ -24,7 +24,7 @@ export class TsButtonComponent implements OnInit {
   @Output()
   click = new EventEmitter<Event>();
 
-  private _interval: NodeJS.Timer;
+  private _interval: any;
 
   constructor() { }
 
