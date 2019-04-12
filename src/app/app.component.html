@@ -20,7 +20,7 @@
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 
-  <ts-button text="Proceed" [disabled]="formElement.invalid" width="100%" showProgress="true"></ts-button>
+  <ts-button text="Proceed" [disabled]="formElement.invalid" width="100%" [(progress)]="showError"></ts-button>
 
   <p>Form Valid: {{formElement.valid}}, Touched: {{formElement.touched}}</p>
 </form>

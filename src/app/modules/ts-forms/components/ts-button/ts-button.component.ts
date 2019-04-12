@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   ]
 })
 export class TsButtonComponent implements OnInit {
-
+  private defaultValue = 10;
   @Input()
   state = 'accent';
   @Input()
@@ -17,9 +17,9 @@ export class TsButtonComponent implements OnInit {
   disabled = false;
   @Input()
   width = 'inherit';
-  @Input()
+
   showProgress = false;
-  value = 10;
+  value = this.defaultValue;
   clicked = false;
   @Output()
   click = new EventEmitter<Event>();
@@ -32,10 +32,7 @@ export class TsButtonComponent implements OnInit {
   }
 
   onClick = (event) => {
-    if (this.showProgress) {
-      this.clicked = true;
-      this._interval = setInterval(() => this.generateNumbers(), 100);
-    }
+    this.clicked = true;
     this.click.emit(event);
   }
 
@@ -47,4 +44,23 @@ export class TsButtonComponent implements OnInit {
     }
   }
 
+  resetNumberInterval = () => {
+    this.value = this.defaultValue;
+  }
+
+  get progress() {
+    return this.showProgress;
+  }
+
+  @Input()
+  set progress(isProgress: boolean) {
+
+    this.showProgress = isProgress;
+    this.resetNumberInterval();
+    if (this.showProgress) {
+      this._interval = setInterval(() => this.generateNumbers(), 100);
+    } else {
+      this.clicked = false;
+    }
+  }
 }

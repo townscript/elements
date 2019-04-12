@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   myExpiry = '';
   myCVC = '';
   myRadio = '';
+  showError = false;
 
   constructor () {
     let option: Option = {text: 'Male', value: 'Male'};
