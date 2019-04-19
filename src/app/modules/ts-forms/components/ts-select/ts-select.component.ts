@@ -22,6 +22,7 @@ export class TsSelectComponent extends TsControlValueAccessor implements OnInit 
   @Input() options: Array<Option>;
   private _selectValue: string;
   @Input() modelObject = false;
+  @Input() disabled = false;
 
   get selectValue(): string {
     return this._selectValue;
