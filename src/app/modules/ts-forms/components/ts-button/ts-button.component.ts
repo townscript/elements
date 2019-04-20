@@ -21,8 +21,6 @@ export class TsButtonComponent implements OnInit {
   showProgress = false;
   value = this.defaultValue;
   clicked = false;
-  @Output()
-  click = new EventEmitter<Event>();
 
   private _interval: any;
 
@@ -33,7 +31,6 @@ export class TsButtonComponent implements OnInit {
 
   onClick = (event) => {
     this.clicked = true;
-    this.click.emit(event);
   }
 
   generateNumbers = () => {
