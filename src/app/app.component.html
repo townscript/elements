@@ -1,26 +1,34 @@
 <form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
-  <ts-input-text [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName" [name]="'name'"></ts-input-text>
+  <ts-input-text [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName" [name]="'name'">
+  </ts-input-text>
   <p>Value: {{myName}}</p>
 
-  <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'" [options]="options" modelObject="true" disabled="true"></ts-select>
+  <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'"
+    [options]="options" modelObject="true" disabled="true"></ts-select>
   <p>Value: {{myGender}}</p>
 
-  <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'"></ts-input-card>
+  <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'">
+  </ts-input-card>
   <p>Value: {{myCard}}</p>
 
-  <ts-input-expiry [placeholder]="'Please enter card expiry'" [required]="true" [(ngModel)]="myExpiry" [name]="'expiry'"></ts-input-expiry>
+  <ts-input-expiry [placeholder]="'Please enter card expiry'" [required]="true" [(ngModel)]="myExpiry"
+    [name]="'expiry'"></ts-input-expiry>
   <p>Value: {{myExpiry}}</p>
 
-  <ts-input-cvc [placeholder]="'Please enter card CVC'" [required]="true" [(ngModel)]="myCVC" [name]="'cvc'"></ts-input-cvc>
+  <ts-input-cvc [placeholder]="'Please enter card CVC'" [required]="true" [(ngModel)]="myCVC" [name]="'cvc'">
+  </ts-input-cvc>
   <p>Value: {{myCVC}}</p>
 
-  <ts-box-radio name="myRadio" value="actionValue1" text="Action 1" color="purple" [(ngModel)]="myRadio" [required]="true" imageSource="favicon.ico"></ts-box-radio>
-  <ts-box-radio name="myRadio" value="actionValue2" text="Action 2" color="purple" [(ngModel)]="myRadio" [required]="true" imageSource="favicon.ico"></ts-box-radio>
+  <ts-box-radio name="myRadio" value="actionValue1" text="Action 1" color="purple" [(ngModel)]="myRadio"
+    [required]="true" imageSource="favicon.ico"></ts-box-radio>
+  <ts-box-radio name="myRadio" value="actionValue2" text="Action 2" color="purple" [(ngModel)]="myRadio"
+    [required]="true" imageSource="favicon.ico"></ts-box-radio>
   <p>Value: {{myRadio}}</p>
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 
-  <ts-button text="Proceed" [disabled]="formElement.invalid" width="100%" [(progress)]="showError"></ts-button>
+  <ts-button text="Proceed" [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
+  </ts-button>
 
   <p>Form Valid: {{formElement.valid}}, Touched: {{formElement.touched}}</p>
 </form>

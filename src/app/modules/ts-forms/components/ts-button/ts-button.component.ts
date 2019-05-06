@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'ts-button',
@@ -11,6 +11,8 @@ export class TsButtonComponent implements OnInit {
   private defaultValue = 10;
   @Input()
   state = 'accent';
+  @Input()
+  type = 'raised';
   @Input()
   text: string;
   @Input()
