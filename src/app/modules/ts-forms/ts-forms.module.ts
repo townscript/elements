@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatInputModule, MatProgressSpinnerModule, MatRippleModule, MatSelectModule} from '@angular/material';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatButtonModule, MatInputModule, MatProgressSpinnerModule, MatRippleModule, MatSelectModule, MatDialogModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   TsInputTextComponent,
   TsSelectComponent,
@@ -12,7 +12,7 @@ import {
   TsBoxRadioComponent,
   TsProgressSpinnerComponent
 } from './components/index';
-import {CreditCardDirectivesModule} from 'angular-cc-library';
+import { CreditCardDirectivesModule } from 'angular-cc-library';
 
 @NgModule({
   imports: [
@@ -20,6 +20,7 @@ import {CreditCardDirectivesModule} from 'angular-cc-library';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDialogModule,
     MatSelectModule,
     MatButtonModule,
     CreditCardDirectivesModule,
@@ -44,7 +45,8 @@ import {CreditCardDirectivesModule} from 'angular-cc-library';
     TsInputCvcComponent,
     TsButtonComponent,
     TsBoxRadioComponent,
-    TsProgressSpinnerComponent
+    TsProgressSpinnerComponent,
+    MatDialogModule
   ]
 })
 export class TsFormsModule { }
