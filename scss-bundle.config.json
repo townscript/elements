@@ -1,4 +1,4 @@
 {
-  "entry": "./src/styles.scss",
+  "entry": "./src/assets/scss/_mat-theme.scss",
   "dest": "dist/elements-theme.scss"
 }
