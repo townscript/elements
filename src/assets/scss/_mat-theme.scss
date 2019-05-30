@@ -24,7 +24,8 @@
   }
 }
 
-$ts-typography: mat-typography-config($font-family: '"Open Sans", sans-serif;');
+$font-family: '"Open Sans", sans-serif;' !default;
+$ts-typography: mat-typography-config($font-family);
 @include mat-core($ts-typography);
 
 $ts-purple: (

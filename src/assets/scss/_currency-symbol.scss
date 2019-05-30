@@ -16,6 +16,9 @@
 .tsi-currency-idr::before{
   content: 'Rp';
 }
+.tsi-currency-inr::before{
+  content: '\20B9';
+}
 .tsi-currency-aud::before{
   content: 'A\0024';
 }
