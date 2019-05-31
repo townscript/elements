@@ -10,7 +10,6 @@ import { Subscription } from 'rxjs';
 export class TsPanelComponent implements AfterContentInit, OnDestroy {
 
   @Input() disable = false;
-  @Input() default = 'closed';
   @ContentChild(TsPanelHeaderComponent) panelHeader: TsPanelHeaderComponent;
   @ContentChild(TsPanelBodyComponent) panelBody: TsPanelBodyComponent;
 
@@ -20,9 +19,6 @@ export class TsPanelComponent implements AfterContentInit, OnDestroy {
   ngAfterContentInit() {
     if (this.disable) {
       return;
-    }
-    if (this.default === 'open') {
-      this.panelBody.toggleView();
     }
     this.subscription = this.panelHeader.clickEmitter.subscribe((e) => {
       this.panelBody.toggleView();

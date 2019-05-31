@@ -33,11 +33,11 @@
   <p>Form Valid: {{formElement.valid}}, Touched: {{formElement.touched}}</p>
 </form>
 
-<ts-panel [disable]="false" default="open">
+<ts-panel [disable]="false">
   <ts-panel-header>
     <div>Head</div>
   </ts-panel-header>
-  <ts-panel-body>
+  <ts-panel-body default="open">
     <div>Body</div>
   </ts-panel-body>
 </ts-panel>

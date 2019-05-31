@@ -1,4 +1,4 @@
-import { Component, AfterContentInit, ElementRef } from '@angular/core';
+import { Component, AfterContentInit, ElementRef, Input } from '@angular/core';
 
 @Component({
     selector: 'ts-panel-body',
@@ -6,6 +6,7 @@ import { Component, AfterContentInit, ElementRef } from '@angular/core';
 })
 export class TsPanelBodyComponent implements AfterContentInit {
     private maxHeight = 0;
+    @Input() default = 'closed';
     private childEl: HTMLElement;
 
     constructor(private elRef: ElementRef) { }
@@ -21,6 +22,9 @@ export class TsPanelBodyComponent implements AfterContentInit {
         this.childEl.style.overflow = 'hidden';
         this.childEl.style.transition = 'max-height .2s ease';
         this.childEl.style.maxHeight = '0';
+        if (this.default === 'open') {
+            this.toggleView();
+        }
     }
 
     toggleView() {
