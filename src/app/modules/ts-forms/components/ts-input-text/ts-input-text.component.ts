@@ -21,12 +21,12 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;
-  @Input() type: string = "text";
+  @Input() type = 'text';
   @Input() pattern = '.*';
   private _inputTextValue: string;
 
   ngOnInit() {
-    if (this.type == "email") {
+    if (this.type == 'email') {
       this.pattern = applicationConstants.emailRegex;
     }
   }
