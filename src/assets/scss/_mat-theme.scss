@@ -118,5 +118,8 @@ $mat-form-field-width: inherit !default;
   background: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  min-width: auto!important;
+  min-width: calc(100vw - 15px)!important;
+  &.remove-padding{
+    padding: 0;
+  }
 }

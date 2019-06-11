@@ -73,6 +73,8 @@ export class AppComponent implements OnInit {
   }
 
   openBottomSheet(): void {
-    this._bottomSheet.open(BottomSheetOverviewExampleSheet);
+    this._bottomSheet.open(BottomSheetOverviewExampleSheet, {
+      panelClass: 'remove-padding'
+    });
   }
 }

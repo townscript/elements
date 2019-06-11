@@ -5,6 +5,7 @@ import { AppComponent, BottomSheetOverviewExampleSheet } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TsFormsModule} from './modules/ts-forms/ts-forms.module';
 import {FormsModule} from '@angular/forms';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    TsFormsModule
+    TsFormsModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent],
