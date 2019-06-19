@@ -6,10 +6,18 @@ import { Component, AfterContentInit, ElementRef, Input } from '@angular/core';
 })
 export class TsPanelBodyComponent implements AfterContentInit {
     private maxHeight = 0;
-    @Input() default = 'closed';
+    private _open = false;
     private childEl: HTMLElement;
 
     constructor(private elRef: ElementRef) { }
+    @Input()
+    set open(val: boolean) {
+        this._open = val;
+        this.toggleView();
+    }
+    get open() {
+        return this._open;
+    }
 
     ngAfterContentInit() {
         if (this.elRef.nativeElement.childNodes.length > 1) {
@@ -22,7 +30,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
         this.childEl.style.overflow = 'hidden';
         this.childEl.style.transition = 'max-height .2s ease';
         this.childEl.style.maxHeight = '0';
-        if (this.default === 'open') {
+        if (this.open) {
             this.toggleView();
         }
     }

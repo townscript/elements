@@ -34,10 +34,10 @@
 </form>
 
 <ts-panel [disable]="false">
-  <ts-panel-header>
+  <ts-panel-header (click)="panelOpen=!panelOpen">
     <div>Head</div>
   </ts-panel-header>
-  <ts-panel-body default="open">
+  <ts-panel-body [open]="panelOpen">
     <div>Body</div>
   </ts-panel-body>
 </ts-panel>

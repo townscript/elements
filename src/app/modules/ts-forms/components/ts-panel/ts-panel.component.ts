@@ -7,26 +7,18 @@ import { Subscription } from 'rxjs';
   selector: 'ts-panel',
   template: '<ng-content></ng-content>'
 })
-export class TsPanelComponent implements AfterContentInit, OnDestroy {
+export class TsPanelComponent implements AfterContentInit {
 
   @Input() disable = false;
   @ContentChild(TsPanelHeaderComponent) panelHeader: TsPanelHeaderComponent;
   @ContentChild(TsPanelBodyComponent) panelBody: TsPanelBodyComponent;
 
-  subscription: Subscription;
   constructor() { }
 
   ngAfterContentInit() {
     if (this.disable) {
       return;
     }
-    this.subscription = this.panelHeader.clickEmitter.subscribe((e) => {
-      this.panelBody.toggleView();
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
 }
