@@ -5,7 +5,7 @@
 .visible {
     opacity: 1;
 }
-:host/deep/.mat-progress-spinner {
+:host::ng-deep.mat-progress-spinner {
     position: absolute;
     top: 50%;
     left: 50%;
