@@ -10,8 +10,8 @@ import { Subscription } from 'rxjs';
 export class TsPanelComponent implements AfterContentInit {
 
   @Input() disable = false;
-  @ContentChild(TsPanelHeaderComponent) panelHeader: TsPanelHeaderComponent;
-  @ContentChild(TsPanelBodyComponent) panelBody: TsPanelBodyComponent;
+  @ContentChild(TsPanelHeaderComponent, { static: true }) panelHeader: TsPanelHeaderComponent;
+  @ContentChild(TsPanelBodyComponent, { static: true }) panelBody: TsPanelBodyComponent;
 
   constructor() { }
 
