@@ -18,6 +18,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@townscript/elements": [
+        "dist/townscript/elements"
+      ],
+      "@townscript/elements/*": [
+        "dist/townscript/elements/*"
+      ]
+    }
   }
 }
