@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Option} from './modules/ts-forms/components';
+import { Component, OnInit } from '@angular/core';
+import { Option } from './modules/ts-forms/components';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({
@@ -53,14 +53,15 @@ export class AppComponent implements OnInit {
   options: Array<Option> = [];
   myCard = '';
   myExpiry = '';
+  panelOpen = false;
   myCVC = '';
   myRadio = '';
   showError = false;
 
   constructor(private _bottomSheet: MatBottomSheet) {
-    let option: Option = {text: 'Male', value: 'Male'};
+    let option: Option = { text: 'Male', value: 'Male' };
     this.options.push(option);
-    option = {text: 'Female', value: 'Female'};
+    option = { text: 'Female', value: 'Female' };
     this.options.push(option);
     this.myGender = option;
   }
