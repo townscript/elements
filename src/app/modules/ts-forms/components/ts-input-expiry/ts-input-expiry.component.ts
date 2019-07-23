@@ -1,7 +1,7 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {config, TsControlValueAccessor} from '../../../../core';
-import {CreditCardValidator} from 'angular-cc-library';
+import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { config, TsControlValueAccessor } from '../../../../core';
+import { CreditCardValidator } from 'angular-cc-library';
 
 @Component({
   selector: 'ts-input-expiry',
@@ -44,20 +44,16 @@ export class TsInputExpiryComponent extends TsControlValueAccessor implements On
   }
 
   writeValue(value: string): void {
-    this.form.setValue({'ccExpiry': value});
-    this.onChange();
+    this.form.setValue({ 'ccExpiry': value });
+    this.onChange(value);
   }
 
   onBlur = () => {
     this.onTouchedPropagation(this.inputExpiryValue);
   }
 
-  onChange = () => {
-    if (this.form.get('ccExpiry').valid) {
-      this.inputExpiryValue = this.form.get('ccExpiry').value;
-    } else {
-      this.inputExpiryValue = undefined;
-    }
+  onChange = (val: string) => {
+    this.inputExpiryValue = val;
   }
 
 }

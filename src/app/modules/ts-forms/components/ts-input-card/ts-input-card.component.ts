@@ -1,7 +1,7 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {config, TsControlValueAccessor} from '../../../../core';
-import {CreditCardValidator} from 'angular-cc-library';
+import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { config, TsControlValueAccessor } from '../../../../core';
+import { CreditCardValidator } from 'angular-cc-library';
 
 @Component({
   selector: 'ts-input-card',
@@ -15,7 +15,7 @@ import {CreditCardValidator} from 'angular-cc-library';
     multi: true
   }]
 })
-export class TsInputCardComponent extends TsControlValueAccessor implements OnInit  {
+export class TsInputCardComponent extends TsControlValueAccessor implements OnInit {
 
   @Input() placeholder = 'Placeholder';
   floatLabel = config.floatLabel;
@@ -44,19 +44,15 @@ export class TsInputCardComponent extends TsControlValueAccessor implements OnIn
   }
 
   writeValue(value: string): void {
-    this.form.setValue({'creditCard': value});
-    this.onChange();
+    this.form.setValue({ 'creditCard': value });
+    this.onChange(value);
   }
 
   onBlur = () => {
     this.onTouchedPropagation(this.inputCardValue);
   }
 
-  onChange = () => {
-    if (this.form.get('creditCard').valid) {
-      this.inputCardValue = this.form.get('creditCard').value;
-    } else {
-      this.inputCardValue = undefined;
-    }
+  onChange = (val: string) => {
+    this.inputCardValue = val;
   }
 }

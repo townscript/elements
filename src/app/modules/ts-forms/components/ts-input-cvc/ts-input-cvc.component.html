@@ -1,4 +1,4 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" [formGroup]="form">
-  <input matInput type="tel" autocomplete="off" ccCVC [placeholder]="placeholder" [required]="required"
-         [name]="name" (blur)="onBlur()" formControlName="ccCVC" (change)="onChange()">
+  <input matInput type="tel" autocomplete="off" ccCVC [placeholder]="placeholder" [required]="required" [name]="name"
+    (blur)="onBlur()" formControlName="ccCVC" (input)="onChange(form.valid ? $event.target.value : '')">
 </mat-form-field>

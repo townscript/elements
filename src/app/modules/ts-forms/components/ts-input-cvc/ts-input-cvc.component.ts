@@ -1,6 +1,6 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
-import {config, TsControlValueAccessor} from '../../../../core';
+import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
+import { config, TsControlValueAccessor } from '../../../../core';
 
 @Component({
   selector: 'ts-input-cvc',
@@ -43,20 +43,16 @@ export class TsInputCvcComponent extends TsControlValueAccessor implements OnIni
   }
 
   writeValue(value: string): void {
-    this.form.setValue({'ccCVC': value});
-    this.onChange();
+    this.form.setValue({ 'ccCVC': value });
+    this.onChange(value);
   }
 
   onBlur = () => {
     this.onTouchedPropagation(this.inputCVCValue);
   }
 
-  onChange = () => {
-    if (this.form.get('ccCVC').valid) {
-      this.inputCVCValue = this.form.get('ccCVC').value;
-    } else {
-      this.inputCVCValue = undefined;
-    }
+  onChange = (val: string) => {
+    this.inputCVCValue = val;
   }
 
 }
