@@ -1,10 +1,10 @@
 @import '../../../../../assets/scss/mat-palette';
 
-.hidden {
+.btn-txt-hidden {
     opacity: 0;
     transition: opacity ease-in-out .2s;
 }
-.visible {
+.btn-txt-visible {
     opacity: 1;
 }
 :host::ng-deep.mat-progress-spinner {

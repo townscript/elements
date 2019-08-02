@@ -1,7 +1,8 @@
 <button mat-button [ngClass]="{'mat-raised-button':type=='raised','mat-stroked-button':type=='stroked'}" [color]="state"
     [disabled]="(showProgress && clicked) || disabled" (click)="onClick($event)" [ngStyle]="{width: width}">
-    <span [ngClass]="{'visible': !showProgress || !clicked,'hidden':showProgress || clicked}">{{text}}</span>
+    <span
+        [ngClass]="{'btn-txt-visible': !showProgress || !clicked,'btn-txt-hidden':showProgress || clicked}">{{text}}</span>
     <mat-progress-spinner class="hidden" mode="determinate" diameter="20" [value]="value"
-        [ngClass]="{'visible': clicked}" *ngIf="showProgress">
+        [ngClass]="{'btn-txt-visible': clicked}" *ngIf="showProgress">
     </mat-progress-spinner>
 </button>
