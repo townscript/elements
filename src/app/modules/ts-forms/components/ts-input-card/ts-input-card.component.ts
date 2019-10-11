@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { config, TsControlValueAccessor } from '../../../../core';
-import { CreditCardValidator } from 'angular-cc-library';
+import { TSCreditCardValidator } from './ts-card.valiator';
 
 @Component({
   selector: 'ts-input-card',
@@ -39,7 +39,7 @@ export class TsInputCardComponent extends TsControlValueAccessor implements OnIn
 
   ngOnInit() {
     this.form = this._fb.group({
-      creditCard: ['', [<any>CreditCardValidator.validateCCNumber]]
+      creditCard: ['', [<any>TSCreditCardValidator.validateCCNumber]]
     });
   }
 
