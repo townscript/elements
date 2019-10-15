@@ -49,6 +49,8 @@ export class BottomSheetOverviewExampleSheet {
 export class AppComponent implements OnInit {
   title = 'elements';
   myName = '';
+  myEmail = '';
+  myContact = '';
   myGender: Option;
   options: Array<Option> = [];
   myCard = '';
@@ -58,7 +60,7 @@ export class AppComponent implements OnInit {
   myRadio = '';
   showError = false;
 
-  constructor(private _bottomSheet: MatBottomSheet) {
+  constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };
     this.options.push(option);
     option = { text: 'Female', value: 'Female' };

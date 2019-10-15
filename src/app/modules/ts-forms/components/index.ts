@@ -9,3 +9,4 @@ export * from './ts-progress-spinner/ts-progress-spinner.component';
 export * from './ts-panel/ts-panel.component';
 export * from './ts-panel/components/ts-panel-header.component';
 export * from './ts-panel/components/ts-panel-body.component';
+export * from './ts-input-contact/ts-input-contact.component';

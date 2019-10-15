@@ -18,7 +18,8 @@ import {
   TsProgressSpinnerComponent,
   TsPanelComponent,
   TsPanelHeaderComponent,
-  TsPanelBodyComponent
+  TsPanelBodyComponent,
+  TsInputContactComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 
@@ -46,7 +47,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     TsProgressSpinnerComponent,
     TsPanelComponent,
     TsPanelHeaderComponent,
-    TsPanelBodyComponent
+    TsPanelBodyComponent,
+    TsInputContactComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -60,7 +62,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     MatDialogModule,
     TsPanelComponent,
     TsPanelHeaderComponent,
-    TsPanelBodyComponent
+    TsPanelBodyComponent,
+    TsInputContactComponent
   ]
 })
 export class TsFormsModule { }

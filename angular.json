@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/intl-tel-input/build/js/utils.js",
+              "node_modules/intl-tel-input/build/js/intlTelInput.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -81,7 +84,10 @@
               },
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/intl-tel-input/build/js/utils.js",
+              "node_modules/intl-tel-input/build/js/intlTelInput.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -1,0 +1,5 @@
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" [formGroup]="form">
+    <input matInput type="text" [placeholder]="placeholder" [required]="required" [name]="name" (blur)="onBlur()"
+        #contact formControlName="contact" (input)="onChange($event.target.value)"
+        (countrychange)="onChange($event.target.value)">
+</mat-form-field>

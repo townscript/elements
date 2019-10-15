@@ -1,0 +1,5 @@
+$flagsImagePath: '~intl-tel-input/build/img/';
+@import '~intl-tel-input/build/css/intlTelInput.min.css';
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background: none;
+}

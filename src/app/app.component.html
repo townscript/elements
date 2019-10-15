@@ -3,6 +3,14 @@
   </ts-input-text>
   <p>Value: {{myName}}</p>
 
+  <ts-input-text [placeholder]="'Please enter your email'" type="email" [required]="true" [(ngModel)]="myEmail"
+    [name]="'email'">
+  </ts-input-text>
+  <p>Value: {{myEmail}}</p>
+
+  <ts-input-contact placeholder="Phone Number" required name="contact" [(ngModel)]="myContact"></ts-input-contact>
+  <p>Value: {{myContact}}</p>
+
   <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'"
     [options]="options" modelObject="true" disabled="true"></ts-select>
   <p>Value: {{myGender}}</p>
