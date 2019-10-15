@@ -27,7 +27,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
 
   ngOnInit() {
     if (this.type == 'email') {
-      this.pattern = ApplicationConstants.emailRegex;
+      this.pattern = new RegExp(ApplicationConstants.emailRegex.re, ApplicationConstants.emailRegex.flags);
     }
   }
 
