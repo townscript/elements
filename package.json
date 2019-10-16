@@ -1,6 +1,6 @@
 {
   "name": "@townscript/elements",
-  "version": "3.0.22",
+  "version": "3.0.23",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
@@ -56,6 +56,9 @@
     "tsickle": "^0.35.0",
     "tslint": "~5.11.0",
     "typescript": "~3.4.5"
+  },
+  "peerDependencies": {
+    "intl-tel-input": "^16.0.5"
   },
   "description": "Townscript material html angular elements",
   "main": "index.js",

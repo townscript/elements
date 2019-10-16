@@ -7,8 +7,7 @@ import intlTelInput from 'intl-tel-input/build/js/intlTelInput';
   selector: 'ts-input-contact',
   templateUrl: './ts-input-contact.component.html',
   styleUrls: [
-    '../../../../../../node_modules/intl-tel-input/build/css/intlTelInput.min.css',
-    './ts-input-contact.component.scss'
+    // './ts-input-contact.component.scss'
   ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,

@@ -3,3 +3,8 @@ $font-family: 'Lato, sans-serif;';
 @import "assets/scss/mat-theme";
 html, body { height: 100%; }
 body { margin: 0; font-family: $font-family }
+$flagsImagePath: '~intl-tel-input/build/img/';
+@import '~intl-tel-input/src/css/intlTelInput';
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background: none;
+}
