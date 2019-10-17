@@ -24,6 +24,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   @Input() type = 'text';
   @Input() pattern = /.*/;
   private _inputTextValue: string;
+  @Input() autofocus = false;
 
   ngOnInit() {
     if (this.type == 'email') {
