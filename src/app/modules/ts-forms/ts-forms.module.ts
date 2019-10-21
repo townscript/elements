@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutofocusFixModule } from 'ngx-autofocus-fix';
+
 import {
   TsInputTextComponent,
   TsSelectComponent,
@@ -34,7 +36,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     MatButtonModule,
     CreditCardDirectivesModule,
     MatRippleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
     TsInputTextComponent,

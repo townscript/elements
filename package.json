@@ -1,6 +1,6 @@
 {
   "name": "@townscript/elements",
-  "version": "3.0.24",
+  "version": "3.0.26",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
@@ -28,6 +28,7 @@
     "angular-cc-library": "^1.2.5",
     "core-js": "^2.5.4",
     "intl-tel-input": "^16.0.5",
+    "ngx-autofocus-fix": "^1.0.4",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
