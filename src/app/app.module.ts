@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent, BottomSheetOverviewExampleSheet } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {TsFormsModule} from './modules/ts-forms/ts-forms.module';
-import {FormsModule} from '@angular/forms';
+import { TsFormsModule } from './modules/ts-forms/ts-forms.module';
+import { FormsModule } from '@angular/forms';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatRippleModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     BrowserAnimationsModule,
     FormsModule,
     TsFormsModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
