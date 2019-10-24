@@ -4,4 +4,4 @@ export * from './src/app/modules/ts-forms/components/index';
 export * from './src/app/modules/ts-forms/ts-forms.module';
 export * from '@angular/material/bottom-sheet';
 export * from '@angular/material/dialog';
-export * from '@angular/material/core/typings/ripple';
+export { MatRippleModule } from '@angular/material';

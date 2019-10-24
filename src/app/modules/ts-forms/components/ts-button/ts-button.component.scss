@@ -10,7 +10,7 @@
     letter-spacing: 0.03rem;
     &:not([disabled]):hover {
         box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
-        transform: translate(-1%);  
+        transform: translateY(-1%);  
     }
     &:disabled {
         cursor: not-allowed;
@@ -31,6 +31,11 @@
         border: 1px solid map-get($ts-pink, 500);
         background-color: map-get($ts-pink, 500);
         color: #fff;
+    }
+    &-accent--inverted {
+        border: 1px solid map-get($ts-pink, 500);
+        background-color: #fff;
+        color: map-get($ts-pink, 500);
     }
     &-warn {
         border: 1px solid #F9AC2E;

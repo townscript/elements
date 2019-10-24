@@ -80,4 +80,8 @@ export class AppComponent implements OnInit {
       panelClass: 'remove-padding'
     });
   }
+
+  sayHi = () => {
+    alert('Hello');
+  }
 }
