@@ -64,7 +64,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     TsPanelComponent,
     TsPanelHeaderComponent,
     TsPanelBodyComponent,
-    TsInputContactComponent
+    TsInputContactComponent,
+    MatRippleModule
   ]
 })
 export class TsFormsModule { }
