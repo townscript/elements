@@ -1,5 +1,44 @@
 @import '../../../../../assets/scss/mat-palette';
 
+.ts-btn {
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.03rem;
+    &:not([disabled]):hover {
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+        transform: translate(-1%);  
+    }
+    &:disabled {
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: .75;
+    }
+    &-primary {
+        border: 1px solid map-get($ts-purple, 500);
+        background-color: map-get($ts-purple, 500);
+        color: #fff;
+    }
+    &-primary--inverted {
+        border: 1px solid map-get($ts-purple, 500);
+        background-color: #fff;
+        color: map-get($ts-purple, 500);
+    }
+    &-accent {
+        border: 1px solid map-get($ts-pink, 500);
+        background-color: map-get($ts-pink, 500);
+        color: #fff;
+    }
+    &-warn {
+        border: 1px solid #F9AC2E;
+        background-color: #F9AC2E;
+        color: #fff;
+    }
+}
+
 .btn-txt-hidden {
     opacity: 0;
     transition: opacity ease-in-out .2s;
@@ -16,14 +55,5 @@
     transform: translate(-50%, -50%);
     circle{
         stroke: #fff;
-    }
-} 
-:host::ng-deep.mat-primary{
-    &--inverted{
-        border: 1px solid map-get($ts-purple, 500);
-        color: map-get($ts-purple, 500);
-        .mat-button-focus-overlay{
-            background: map-get($ts-purple, 500)
-        }
     }
 }

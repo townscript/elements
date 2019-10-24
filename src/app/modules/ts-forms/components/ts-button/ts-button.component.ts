@@ -1,18 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ts-button',
   templateUrl: './ts-button.component.html',
   styleUrls: [
     './ts-button.component.scss'
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
 export class TsButtonComponent implements OnInit {
-  private defaultValue = 10;
+  private readonly defaultValue = 10;
   @Input()
   state = 'accent';
-  @Input()
-  type = 'raised';
   @Input()
   text: string;
   @Input()

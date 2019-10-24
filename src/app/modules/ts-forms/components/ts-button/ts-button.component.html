@@ -1,5 +1,5 @@
-<button mat-button [ngClass]="{'mat-raised-button':type=='raised','mat-stroked-button':type=='stroked'}" [color]="state"
-    [disabled]="(showProgress && clicked) || disabled" (click)="onClick($event)" [ngStyle]="{width: width}">
+<button matRipple [ngClass]="'ts-btn-'+state" class="ts-btn" [disabled]="(showProgress && clicked) || disabled"
+    (click)="onClick($event)" [ngStyle]="{width: width}">
     <span
         [ngClass]="{'btn-txt-visible': !showProgress || !clicked,'btn-txt-hidden':showProgress || clicked}">{{text}}</span>
     <mat-progress-spinner class="hidden" mode="determinate" diameter="20" [value]="value"
