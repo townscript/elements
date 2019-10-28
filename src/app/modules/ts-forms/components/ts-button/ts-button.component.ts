@@ -13,8 +13,6 @@ export class TsButtonComponent implements OnInit {
   @Input()
   state = 'accent';
   @Input()
-  text: string;
-  @Input()
   disabled = false;
   @Input()
   width = 'inherit';
