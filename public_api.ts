@@ -5,3 +5,4 @@ export * from './src/app/modules/ts-forms/ts-forms.module';
 export * from '@angular/material/bottom-sheet';
 export * from '@angular/material/dialog';
 export { MatRippleModule } from '@angular/material';
+export * from '@angular/material/snack-bar';

@@ -1,6 +1,6 @@
 {
   "name": "@townscript/elements",
-  "version": "3.0.31",
+  "version": "3.0.32",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
