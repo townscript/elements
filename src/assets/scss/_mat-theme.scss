@@ -42,6 +42,7 @@ $ts-app-theme: mat-light-theme($ts-app-primary, $ts-app-accent, $ts-app-warn);
 @include mat-input-theme($ts-app-theme);
 @include mat-progress-spinner-theme($ts-app-theme);
 @include mat-select-theme($ts-app-theme);
+@include mat-snack-bar-theme($ts-app-theme);
 
 $mat-form-field-width: inherit !default;
 .mat-form-field{
