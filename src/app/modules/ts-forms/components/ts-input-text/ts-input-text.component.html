@@ -1,4 +1,7 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
   <input matInput [autofocus]="autofocus" [type]="type" [placeholder]="placeholder" [required]="required"
-    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur">
+    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur"
+    *ngIf="type !== 'email'">
+  <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
+    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" *ngIf="type === 'email'">
 </mat-form-field>
