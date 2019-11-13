@@ -22,6 +22,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   floatLabel = config.floatLabelOptions[1];
   @Input() required = false;
   @Input() name: string;
+  @Input() country?: string;
   @ViewChild('contact', { static: false }) contactEl: ElementRef;
   private iti: any;
   form: FormGroup;
@@ -46,7 +47,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
 
   ngAfterViewInit() {
     this.iti = intlTelInput(this.contactEl.nativeElement, {
-      initialCountry: 'in',
+      initialCountry: this.country.toLowerCase() || 'in',
       preferredCountries: ['in', 'id'],
       utilsScript: '../../../../../../node_modules/intl-tel-input/build/js/utils.js',
     });
