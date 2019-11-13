@@ -47,7 +47,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
 
   ngAfterViewInit() {
     this.iti = intlTelInput(this.contactEl.nativeElement, {
-      initialCountry: this.country.toLowerCase() || 'in',
+      initialCountry: this.country || 'in',
       preferredCountries: ['in', 'id'],
       utilsScript: '../../../../../../node_modules/intl-tel-input/build/js/utils.js',
     });
