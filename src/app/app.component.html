@@ -13,7 +13,7 @@
   <p>Value: {{myContact}}</p>
 
   <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'"
-    [options]="options" modelObject="true" disabled="true"></ts-select>
+    [options]="options" modelObject="true"></ts-select>
   <p>Value: {{myGender}}</p>
 
   <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'">
@@ -35,6 +35,9 @@
   <p>Value: {{myRadio}}</p>
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
+
+  <ts-checkbox name="checkbox" [required]="true" [(ngModel)]="myCheckboxVal">I&apos;m checkbox</ts-checkbox>
+  <p>Value: {{myCheckboxVal}}</p>
 
   <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
     Proceed

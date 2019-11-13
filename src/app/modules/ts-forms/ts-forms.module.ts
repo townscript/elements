@@ -20,9 +20,12 @@ import {
   TsPanelComponent,
   TsPanelHeaderComponent,
   TsPanelBodyComponent,
-  TsInputContactComponent
+  TsInputContactComponent,
+  TsCheckboxComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { InputTrimModule } from 'ng2-trim-directive';
 
 @NgModule({
   imports: [
@@ -35,6 +38,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     CreditCardDirectivesModule,
     MatRippleModule,
     MatProgressSpinnerModule,
+    MatCheckboxModule,
+    InputTrimModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -49,7 +54,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     TsPanelComponent,
     TsPanelHeaderComponent,
     TsPanelBodyComponent,
-    TsInputContactComponent
+    TsInputContactComponent,
+    TsCheckboxComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -65,7 +71,8 @@ import { CreditCardDirectivesModule } from 'angular-cc-library';
     TsPanelHeaderComponent,
     TsPanelBodyComponent,
     TsInputContactComponent,
-    MatRippleModule
+    MatRippleModule,
+    TsCheckboxComponent
   ]
 })
 export class TsFormsModule { }
