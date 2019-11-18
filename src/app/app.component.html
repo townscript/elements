@@ -1,11 +1,11 @@
 <form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
   <ts-input-text [autofocus]="true" [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName"
-    [name]="'name'">
+    [name]="'name'" maxlength="100">
   </ts-input-text>
   <p>Value: {{myName}}</p>
 
   <ts-input-text [placeholder]="'Please enter your email'" type="email" [required]="true" [(ngModel)]="myEmail"
-    [name]="'email'">
+    [name]="'email'" maxlength="100">
   </ts-input-text>
   <p>Value: {{myEmail}}</p>
 
