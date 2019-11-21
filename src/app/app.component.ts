@@ -59,7 +59,8 @@ export class AppComponent implements OnInit {
   myCVC = '';
   myRadio = '';
   showError = false;
-  myCheckboxVal = false;
+  myCheckboxVal = true;
+  myAddress = '';
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };

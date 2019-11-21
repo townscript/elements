@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { config, TsControlValueAccessor } from '../../../../core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ApplicationConstants } from '../../../../shared/application.constant';
+import { RegEx } from '../../../../shared/regex.constant';
 
 @Component({
   selector: 'ts-input-text',
@@ -29,7 +29,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
 
   ngOnInit() {
     if (this.type == 'email') {
-      this.pattern = new RegExp(ApplicationConstants.emailRegex.re, ApplicationConstants.emailRegex.flags);
+      this.pattern = RegEx.email;
     }
   }
 

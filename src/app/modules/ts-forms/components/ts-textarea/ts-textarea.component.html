@@ -1,0 +1,4 @@
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
+  <textarea matInput [placeholder]="placeholder" [required]="required" [(ngModel)]="textAreaValue" [name]="name"
+    (blur)="onBlur()" trim="blur" [attr.maxlength]="maxlength"></textarea>
+</mat-form-field>

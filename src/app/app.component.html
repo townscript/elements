@@ -15,6 +15,11 @@
   </ts-input-contact>
   <p>Value: {{myContact}}</p>
 
+  <ts-textarea [placeholder]="'Please enter your address'" [required]="true" [(ngModel)]="myAddress" [name]="'address'"
+    maxlength="1000">
+  </ts-textarea>
+  <p>Value: {{myAddress}}</p>
+
   <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'"
     [options]="options" modelObject="true"></ts-select>
   <p>Value: {{myGender}}</p>

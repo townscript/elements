@@ -30,8 +30,13 @@ export class TsCheckboxComponent extends TsControlValueAccessor implements OnIni
 
   set checkboxValue(val: string) {
     this._checkboxValue = val;
-    this.onChangePropagation(val);
-    this.onTouchedPropagation(val);
+    if (!val && this.required) {
+      this.onChangePropagation('');
+      this.onTouchedPropagation('');
+    } else {
+      this.onChangePropagation(val);
+      this.onTouchedPropagation(val);
+    }
   }
 
   writeValue(value: string): void {

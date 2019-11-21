@@ -6,3 +6,4 @@ export * from '@angular/material/bottom-sheet';
 export * from '@angular/material/dialog';
 export { MatRippleModule } from '@angular/material';
 export * from '@angular/material/progress-bar';
+export * from './src/app/shared/regex.constant';
