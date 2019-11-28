@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TsFormsModule } from './modules/ts-forms/ts-forms.module';
 import { FormsModule } from '@angular/forms';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatRippleModule, MatProgressBarModule } from '@angular/material';
+import { MatRippleModule, MatTooltipModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { MatRippleModule, MatProgressBarModule } from '@angular/material';
     FormsModule,
     TsFormsModule,
     MatBottomSheetModule,
-    MatProgressBarModule,
+    MatTooltipModule,
     MatRippleModule
   ],
   providers: [],

@@ -1,5 +1,3 @@
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
-
 <form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
   <ts-input-text [autofocus]="true" [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName"
     [name]="'name'" maxlength="100">
@@ -74,7 +72,7 @@
   <i class="tsi tsi-currency-idr"></i><br>
 </div>
 
-<ts-button (click)="openBottomSheet()">Open Bottom Sheet</ts-button>
+<ts-button (click)="openBottomSheet()" matTooltip="Click me">Open Bottom Sheet</ts-button>
 <div>
   <p>Enabled Buttons</p>
   <ts-button state="primary" [progress]="true">Primary</ts-button>
