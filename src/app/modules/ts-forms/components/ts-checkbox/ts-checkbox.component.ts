@@ -19,6 +19,7 @@ export class TsCheckboxComponent extends TsControlValueAccessor implements OnIni
   @Input() required = false;
   @Input() name: string;
   @Input() state = 'primary';
+  @Input() disabled = false;
   private _checkboxValue: string;
 
   ngOnInit() {

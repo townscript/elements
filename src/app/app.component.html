@@ -42,7 +42,11 @@
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 
-  <ts-checkbox name="checkbox" [required]="true" [(ngModel)]="myCheckboxVal">I&apos;m checkbox</ts-checkbox>
+  <ts-checkbox name="checkbox" [required]="true" [(ngModel)]="myCheckboxVal" (ngModelChange)="checkBoxChangeCall()"
+    [disabled]="false">
+    I&apos;m
+    checkbox
+  </ts-checkbox>
   <p>Value: {{myCheckboxVal}}</p>
 
   <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">

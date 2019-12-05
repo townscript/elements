@@ -86,4 +86,8 @@ export class AppComponent implements OnInit {
   sayHi = () => {
     alert('Hello');
   }
+
+  checkBoxChangeCall = () => {
+    console.log('checkbox value is ' + this.myCheckboxVal);
+  }
 }
