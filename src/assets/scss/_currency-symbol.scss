@@ -48,6 +48,9 @@
   content: '\0E3F';
 }
 // Other new Currencies
+.tsi-currency-aed::before{
+  content: 'AED';
+}
 .tsi-currency-afn::before{
   content: 'AFN';
 }
@@ -83,6 +86,9 @@
 }
 .tsi-currency-bgn::before{
   content: 'BGN';
+}
+.tsi-currency-bhd::before{
+  content: 'BHD';
 }
 .tsi-currency-bif::before{
   content: 'BIF';
@@ -183,11 +189,17 @@
 .tsi-currency-ils::before{
   content: 'ILS';
 }
+.tsi-currency-iqd::before{
+  content: 'IQD';
+}
 .tsi-currency-isk::before{
   content: 'ISK';
 }
 .tsi-currency-jmd::before{
   content: 'JMD';
+}
+.tsi-currency-jod::before{
+  content: 'JOD';
 }
 .tsi-currency-kes::before{
   content: 'KES';
@@ -203,6 +215,9 @@
 }
 .tsi-currency-krw::before{
   content: 'KRW';
+}
+.tsi-currency-kwd::before{
+  content: 'KWD';
 }
 .tsi-currency-kyd::before{
   content: 'KYD';
@@ -224,6 +239,9 @@
 }
 .tsi-currency-lsl::before{
   content: 'LSL';
+}
+.tsi-currency-lyd::before{
+  content: 'LYD';
 }
 .tsi-currency-mad::before{
   content: 'MAD';
@@ -278,6 +296,9 @@
 }
 .tsi-currency-npr::before{
   content: 'NPR';
+}
+.tsi-currency-omr::before{
+  content: 'OMR';
 }
 .tsi-currency-pab::before{
   content: 'PAB';
@@ -347,6 +368,9 @@
 }
 .tsi-currency-tjs::before{
   content: 'TJS';
+}
+.tsi-currency-tnd::before{
+  content: 'TND';
 }
 .tsi-currency-top::before{
   content: 'TOP';
