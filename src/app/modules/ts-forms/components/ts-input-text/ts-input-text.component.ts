@@ -26,10 +26,13 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   private _inputTextValue: string;
   @Input() autofocus = false;
   @Input() maxlength?: number;
+  @Input() minlength?: number;
 
   ngOnInit() {
     if (this.type == 'email') {
       this.pattern = RegEx.email;
+    } else if (!this.pattern) {
+      this.pattern = /.*/;
     }
   }
 
