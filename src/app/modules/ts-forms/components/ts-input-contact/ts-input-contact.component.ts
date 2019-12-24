@@ -63,7 +63,9 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   }
 
   writeValue(value: string): void {
-    this.form.setValue({ 'contact': value });
+    if (value !== undefined) {
+      this.form.setValue({ 'contact': value });
+    }
     this.onChange(value);
   }
 
