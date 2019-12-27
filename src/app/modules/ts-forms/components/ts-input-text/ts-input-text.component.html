@@ -1,9 +1,22 @@
-<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" *ngIf="type !== 'email'">
   <input matInput [autofocus]="autofocus" [type]="type" [placeholder]="placeholder" [required]="required"
-    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur"
-    *ngIf="type !== 'email'" [attr.maxlength]="maxlength" [attr.minlength]="minlength">
-
+    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur" [maxlength]="maxlength"
+    [minlength]="minlength" #inputModelRef="ngModel">
+  <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
+    <span *ngIf="inputModelRef?.errors?.required">Input field is required.</span>
+    <span *ngIf="inputModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
+    <span *ngIf="inputModelRef?.errors?.pattern && !inputModelRef?.errors?.minlength">Please enter valid input
+      type.</span>
+  </mat-error>
+</mat-form-field>
+<mat-form-field *ngIf="type === 'email'">
   <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
-    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" *ngIf="type === 'email'"
-    [attr.maxlength]="maxlength" [attr.minlength]="minlength">
+    [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
+    [minlength]="minlength" #emailModelRef="ngModel">
+  <mat-error *ngIf="emailModelRef?.invalid && (emailModelRef?.dirty || emailModelRef?.touched)">
+    <span *ngIf="emailModelRef?.errors?.required">Input field is required.</span>
+    <span *ngIf="emailModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
+    <span *ngIf="emailModelRef?.errors?.pattern && !emailModelRef?.errors?.minlength">Please enter valid email
+      type.</span>
+  </mat-error>
 </mat-form-field>
