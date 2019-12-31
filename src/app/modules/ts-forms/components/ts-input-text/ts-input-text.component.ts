@@ -28,7 +28,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   @Input() maxlength?: number;
 
   ngOnInit() {
-    if (this.type == 'email') {
+    if (this.type === 'email') {
       this.pattern = RegEx.email;
     }
   }
@@ -39,11 +39,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
 
   set inputTextValue(val: string) {
     this._inputTextValue = val;
-    if (val && val.match(this.pattern)) {
-      this.onChangePropagation(val);
-    } else {
-      this.onChangePropagation('');
-    }
+    this.onChangePropagation(val && val.match(this.pattern) ? val : '');
   }
 
   writeValue(value: string): void {

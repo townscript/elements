@@ -12,3 +12,4 @@ export * from './ts-panel/components/ts-panel-body.component';
 export * from './ts-input-contact/ts-input-contact.component';
 export * from './ts-checkbox/ts-checkbox.component';
 export * from './ts-textarea/ts-textarea.component';
+export * from './ts-file-upload/ts-file-upload.component';

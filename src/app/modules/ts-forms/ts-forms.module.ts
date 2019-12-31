@@ -22,7 +22,8 @@ import {
   TsPanelBodyComponent,
   TsInputContactComponent,
   TsCheckboxComponent,
-  TsTextareaComponent
+  TsTextareaComponent,
+  TsFileUploadComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -57,7 +58,8 @@ import { InputTrimModule } from 'ng2-trim-directive';
     TsPanelBodyComponent,
     TsInputContactComponent,
     TsCheckboxComponent,
-    TsTextareaComponent
+    TsTextareaComponent,
+    TsFileUploadComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -75,7 +77,8 @@ import { InputTrimModule } from 'ng2-trim-directive';
     TsInputContactComponent,
     MatRippleModule,
     TsCheckboxComponent,
-    TsTextareaComponent
+    TsTextareaComponent,
+    TsFileUploadComponent
   ]
 })
 export class TsFormsModule { }
