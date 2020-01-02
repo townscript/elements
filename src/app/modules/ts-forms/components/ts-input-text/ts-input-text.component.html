@@ -12,9 +12,4 @@
   <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
     [minlength]="minlength" #emailModelRef="ngModel">
-  <mat-error *ngIf="emailModelRef?.invalid && (emailModelRef?.dirty || emailModelRef?.touched)">
-    <span *ngIf="emailModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
-    <span *ngIf="emailModelRef?.errors?.pattern && !emailModelRef?.errors?.minlength">Please enter valid email
-      type.</span>
-  </mat-error>
 </mat-form-field>
