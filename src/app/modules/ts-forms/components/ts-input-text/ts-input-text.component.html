@@ -3,7 +3,6 @@
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur" [maxlength]="maxlength"
     [minlength]="minlength" #inputModelRef="ngModel">
   <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
-    <span *ngIf="inputModelRef?.errors?.required">Input field is required.</span>
     <span *ngIf="inputModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
     <span *ngIf="inputModelRef?.errors?.pattern && !inputModelRef?.errors?.minlength">Please enter valid input
       type.</span>
@@ -14,7 +13,6 @@
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
     [minlength]="minlength" #emailModelRef="ngModel">
   <mat-error *ngIf="emailModelRef?.invalid && (emailModelRef?.dirty || emailModelRef?.touched)">
-    <span *ngIf="emailModelRef?.errors?.required">Input field is required.</span>
     <span *ngIf="emailModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
     <span *ngIf="emailModelRef?.errors?.pattern && !emailModelRef?.errors?.minlength">Please enter valid email
       type.</span>

@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, Input } from '@angular/core';
+import { Component, OnInit, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TsControlValueAccessor } from '../../../../core';
 
@@ -20,6 +20,8 @@ export class TsCheckboxComponent extends TsControlValueAccessor implements OnIni
   @Input() name: string;
   @Input() state = 'primary';
   @Input() disabled = false;
+
+  @Output() checkBoxState = new EventEmitter<any>();
   private _checkboxValue: string;
 
   ngOnInit() {
@@ -42,6 +44,10 @@ export class TsCheckboxComponent extends TsControlValueAccessor implements OnIni
 
   writeValue(value: string): void {
     this.checkboxValue = value;
+  }
+
+  checkBoxChange = (value: any) => {
+    this.checkBoxState.emit(value.checked);
   }
 
 }

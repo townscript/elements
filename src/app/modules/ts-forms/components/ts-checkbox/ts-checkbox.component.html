@@ -1,3 +1,4 @@
-<mat-checkbox [required]="required" [(ngModel)]="checkboxValue" [name]="name" [color]="state" [disabled]="disabled">
+<mat-checkbox [required]="required" [(ngModel)]="checkboxValue" [name]="name" [color]="state" [disabled]="disabled"
+  (change)="checkBoxChange($event)">
   <ng-content></ng-content>
 </mat-checkbox>
