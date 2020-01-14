@@ -1,5 +1,4 @@
-<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" [formGroup]="form">
-    <input matInput type="tel" [placeholder]="placeholder" [required]="required" [name]="name" (blur)="onBlur()"
-        #contact formControlName="contact" (input)="onChange($event.target.value)"
-        (countrychange)="onChange($event.target.value)" trim="blur">
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
+  <input matInput type="tel" [placeholder]="placeholder" [required]="required" [name]="name" (blur)="onBlur()" #contact
+    [(ngModel)]="contactValue" (countrychange)="onCountryChange($event.target.value)" trim="blur" appContactValidate>
 </mat-form-field>

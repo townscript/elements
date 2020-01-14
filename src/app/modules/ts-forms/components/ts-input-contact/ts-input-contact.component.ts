@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, forwardRef, ViewChild, ElementRef, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { config, TsControlValueAccessor } from '../../../../core';
-import { NG_VALUE_ACCESSOR, FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import intlTelInput from 'intl-tel-input/build/js/intlTelInput';
 
 @Component({
@@ -24,21 +24,17 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   @Input() name: string;
   @Input() country?: string;
   @ViewChild('contact', { static: false }) contactEl: ElementRef;
-  private iti: any;
-  form: FormGroup;
+  iti: any;
   private _contactValue: string;
 
-  constructor(private readonly _fb: FormBuilder) {
+  constructor() {
     super();
   }
 
   ngOnInit() {
-    this.form = this._fb.group({
-      contact: ['', this.contactNumberValidator]
-    });
   }
 
-  private readonly contactNumberValidator = () => {
+  contactNumberValidator = () => {
     if (this.iti && !this.iti.isValidNumber()) {
       return { contact: 'Invalid contact number' };
     }
@@ -59,22 +55,26 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
 
   set contactValue(val: string) {
     this._contactValue = val;
-    this.onChangePropagation(val);
+    if (this.iti.isValidNumber()) {
+      this.onChangePropagation(this.iti.getNumber());
+    } else {
+      this.onChangePropagation('');
+    }
   }
 
   writeValue(value: string): void {
-    if (value !== undefined) {
-      this.form.setValue({ 'contact': value });
+    if (value) {
+      this.iti.setNumber(value);
+      this.contactValue = value;
     }
-    this.onChange(value);
   }
 
   onBlur = () => {
     this.onTouchedPropagation(this.contactValue);
   }
 
-  onChange = (val: string) => {
-    this.contactValue = this.form.valid ? this.iti.getNumber() : '';
+  onCountryChange = (val: string) => {
+    this.onChangePropagation(this.iti.getNumber());
   }
 
 }
