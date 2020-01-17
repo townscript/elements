@@ -17,6 +17,9 @@ export class ContactValidatorDirective implements Validator {
       return null;
     }
     const nativeElm = this.elementRef.nativeElement;
+    if (nativeElm && nativeElm.value === '') {
+      return;
+    }
     const itiRef = intlInpGlobals.getInstance(nativeElm);
     if (itiRef && !itiRef.isValidNumber()) {
       return { contact: 'Invalid contact number' };
