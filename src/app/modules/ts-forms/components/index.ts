@@ -13,3 +13,4 @@ export * from './ts-input-contact/ts-input-contact.component';
 export * from './ts-checkbox/ts-checkbox.component';
 export * from './ts-textarea/ts-textarea.component';
 export * from './ts-input-contact/ts-contact-validator.directive';
+export * from './ts-radios/ts-radios.component';

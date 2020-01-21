@@ -23,11 +23,13 @@ import {
   TsInputContactComponent,
   TsCheckboxComponent,
   TsTextareaComponent,
-  ContactValidatorDirective
+  ContactValidatorDirective,
+  TsRadiosComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
+import { MatRadioModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -42,6 +44,7 @@ import { InputTrimModule } from 'ng2-trim-directive';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     InputTrimModule,
+    MatRadioModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -59,7 +62,8 @@ import { InputTrimModule } from 'ng2-trim-directive';
     TsInputContactComponent,
     TsCheckboxComponent,
     TsTextareaComponent,
-    ContactValidatorDirective
+    ContactValidatorDirective,
+    TsRadiosComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -77,7 +81,8 @@ import { InputTrimModule } from 'ng2-trim-directive';
     TsInputContactComponent,
     MatRippleModule,
     TsCheckboxComponent,
-    TsTextareaComponent
+    TsTextareaComponent,
+    TsRadiosComponent
   ]
 })
 export class TsFormsModule { }

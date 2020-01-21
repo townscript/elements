@@ -44,6 +44,7 @@ $ts-app-theme: mat-light-theme($ts-app-primary, $ts-app-accent, $ts-app-warn);
 @include mat-select-theme($ts-app-theme);
 @include mat-tooltip-theme($ts-app-theme);
 @include mat-checkbox-theme($ts-app-theme);
+@include mat-radio-theme($ts-app-theme);
 
 $mat-form-field-width: inherit !default;
 .mat-form-field{

@@ -49,6 +49,12 @@
   </ts-checkbox>
   <p>Value: {{myCheckboxVal}}</p>
 
+  <label>Select following Radio:</label>
+  <ts-radios name="radio" [options]="options" [required]="true" [(ngModel)]="myRadioVal" [disabled]="false"
+    [inline]="true">
+  </ts-radios>
+  <p>Value: {{myRadioVal}}</p>
+
   <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
     Proceed
   </ts-button>

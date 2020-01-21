@@ -1,0 +1,6 @@
+<mat-radio-group [(ngModel)]="radioValue" class="ts-radios" [required]="required" [name]="name" [color]="state"
+    [disabled]="disabled" [ngClass]="{'ts-radios--row': inline}">
+    <mat-radio-button class="ts-radios__item" *ngFor="let option of options" [value]="option.value">
+        {{option.text}}
+    </mat-radio-button>
+</mat-radio-group>

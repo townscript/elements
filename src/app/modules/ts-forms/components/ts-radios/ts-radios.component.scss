@@ -1,0 +1,13 @@
+.ts-radios {
+    display: flex;
+    flex-direction: column;
+    &__item{
+        margin: 1rem 0;
+    }
+    &--row{
+        flex-direction: row;
+        .ts-radios__item+.ts-radios__item {
+            margin-left: 1rem;
+        }
+    }
+}
