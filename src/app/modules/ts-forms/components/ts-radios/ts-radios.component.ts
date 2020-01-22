@@ -31,7 +31,7 @@ export class TsRadiosComponent extends TsControlValueAccessor implements OnInit 
 
   set radioValue(val: boolean) {
     this._radioValue = val;
-    if (!val && this.required) {
+    if (this.required && val === undefined) {
       this.onChangePropagation('');
       this.onTouchedPropagation('');
     } else {
