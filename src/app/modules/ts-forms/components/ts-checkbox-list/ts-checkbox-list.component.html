@@ -1,0 +1,8 @@
+<div class="ts-checkboxes" [ngClass]="{'ts-checkboxes--row': inline}">
+    <ng-container *ngFor="let option of options">
+        <mat-checkbox [required]="required" [value]="option.value" [name]="name" [color]="state" [disabled]="disabled"
+            (change)="checkBoxChange($event)" [checked]="checked(option)" class="ts-checkboxes__item">
+            {{ option.text }}
+        </mat-checkbox>
+    </ng-container>
+</div>

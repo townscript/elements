@@ -24,7 +24,8 @@ import {
   TsCheckboxComponent,
   TsTextareaComponent,
   ContactValidatorDirective,
-  TsRadiosComponent
+  TsRadiosComponent,
+  TsCheckboxListComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -63,7 +64,8 @@ import { MatRadioModule } from '@angular/material';
     TsCheckboxComponent,
     TsTextareaComponent,
     ContactValidatorDirective,
-    TsRadiosComponent
+    TsRadiosComponent,
+    TsCheckboxListComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -82,7 +84,8 @@ import { MatRadioModule } from '@angular/material';
     MatRippleModule,
     TsCheckboxComponent,
     TsTextareaComponent,
-    TsRadiosComponent
+    TsRadiosComponent,
+    TsCheckboxListComponent
   ]
 })
 export class TsFormsModule { }

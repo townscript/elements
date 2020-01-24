@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
   showError = false;
   myCheckboxVal = true;
   myRadioVal = undefined;
+  myCheckboxListVal = undefined;
   myAddress = '';
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {

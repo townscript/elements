@@ -20,7 +20,7 @@
 
   <ts-select [placeholder]="'Please select your gender'" [required]="true" [(ngModel)]="myGender" [name]="'gender'"
     [options]="options" modelObject="true"></ts-select>
-  <p>Value: {{myGender}}</p>
+  <p>Value: {{myGender | json}}</p>
 
   <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'">
   </ts-input-card>
@@ -54,6 +54,12 @@
     [inline]="true">
   </ts-radios>
   <p>Value: {{myRadioVal}}</p>
+
+  <label>Select following Checkboxes:</label>
+  <ts-checkbox-list name="checkboxlist" [options]="options" [required]="true" [(ngModel)]="myCheckboxListVal"
+    [disabled]="false" [inline]="true">
+  </ts-checkbox-list>
+  <p>Value: {{myCheckboxListVal | json}}</p>
 
   <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
     Proceed

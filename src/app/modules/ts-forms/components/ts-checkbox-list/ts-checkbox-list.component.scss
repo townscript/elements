@@ -1,4 +1,4 @@
-.ts-radios {
+.ts-checkboxes {
     display: flex;
     flex-direction: column;
     &__item{
@@ -6,7 +6,7 @@
     }
     &--row{
         flex-direction: row;
-        .ts-radios__item+.ts-radios__item {
+        .ts-checkboxes__item+.ts-checkboxes__item {
             margin-left: 1rem;
         }
     }
