@@ -3,11 +3,10 @@
     flex-direction: column;
     &__item{
         margin: 0.5rem 0;
+        padding: 0 0.5rem;
     }
     &--row{
         flex-direction: row;
-        .ts-radios__item+.ts-radios__item {
-            margin-left: 1rem;
-        }
+        flex-wrap: wrap;
     }
 }
