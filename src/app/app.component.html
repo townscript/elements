@@ -61,6 +61,9 @@
   </ts-checkbox-list>
   <p>Value: {{myCheckboxListVal | json}}</p>
 
+  <ts-calendar placeholder="DOB" [required]="true" name="dob" [disabled]="false" [(ngModel)]="myDOB"></ts-calendar>
+  <p>Value: {{myDOB}}</p>
+
   <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
     Proceed
   </ts-button>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatRippleModule } from '@angular/material/core';
+import { MatRippleModule, MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -25,12 +25,14 @@ import {
   TsTextareaComponent,
   ContactValidatorDirective,
   TsRadiosComponent,
-  TsCheckboxListComponent
+  TsCheckboxListComponent,
+  TsCalendarComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
-import { MatRadioModule } from '@angular/material';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   imports: [
@@ -46,6 +48,8 @@ import { MatRadioModule } from '@angular/material';
     MatCheckboxModule,
     InputTrimModule,
     MatRadioModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -65,7 +69,8 @@ import { MatRadioModule } from '@angular/material';
     TsTextareaComponent,
     ContactValidatorDirective,
     TsRadiosComponent,
-    TsCheckboxListComponent
+    TsCheckboxListComponent,
+    TsCalendarComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -85,7 +90,8 @@ import { MatRadioModule } from '@angular/material';
     TsCheckboxComponent,
     TsTextareaComponent,
     TsRadiosComponent,
-    TsCheckboxListComponent
+    TsCheckboxListComponent,
+    TsCalendarComponent
   ]
 })
 export class TsFormsModule { }

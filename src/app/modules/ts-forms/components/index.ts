@@ -15,3 +15,4 @@ export * from './ts-textarea/ts-textarea.component';
 export * from './ts-input-contact/ts-contact-validator.directive';
 export * from './ts-radios/ts-radios.component';
 export * from './ts-checkbox-list/ts-checkbox-list.component';
+export * from './ts-calendar/ts-calendar.component';

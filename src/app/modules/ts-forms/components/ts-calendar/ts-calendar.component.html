@@ -1,0 +1,6 @@
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
+    <input matInput [matDatepicker]="picker" [placeholder]="placeholder" [required]="required"
+        [(ngModel)]="calendarValue" [name]="name" (blur)="onBlur()" [disabled]="disabled" [max]="max" [min]="min">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker [color]="state" [startView]="startView"></mat-datepicker>
+</mat-form-field>

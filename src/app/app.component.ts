@@ -63,6 +63,7 @@ export class AppComponent implements OnInit {
   myRadioVal = undefined;
   myCheckboxListVal = undefined;
   myAddress = '';
+  myDOB = undefined;
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };
