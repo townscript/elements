@@ -1,13 +1,13 @@
 import { Component, OnInit, Input, forwardRef, ViewChild, ElementRef, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { config, TsControlValueAccessor } from '../../../../core';
-import { NG_VALUE_ACCESSOR, FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import intlTelInput from 'intl-tel-input/build/js/intlTelInput';
 
 @Component({
   selector: 'ts-input-contact',
   templateUrl: './ts-input-contact.component.html',
   styleUrls: [
-    // './ts-input-contact.component.scss'
+    './ts-input-contact.component.scss'
   ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
@@ -19,7 +19,7 @@ import intlTelInput from 'intl-tel-input/build/js/intlTelInput';
 export class TsInputContactComponent extends TsControlValueAccessor implements OnInit, AfterViewInit {
 
   @Input() placeholder = 'Placeholder';
-  floatLabel = config.floatLabelOptions[1];
+  floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;
   @Input() country?: string;

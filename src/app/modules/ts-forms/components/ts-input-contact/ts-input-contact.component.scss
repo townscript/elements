@@ -1,0 +1,8 @@
+.ts-contact {
+    .mat-form-field-label{
+        padding-left: 52px;
+    }
+    &.mat-form-field-should-float .mat-form-field-label{
+        padding-left: 0px;
+    }
+}
