@@ -1,19 +1,9 @@
-import { Component, OnInit, forwardRef, Input } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, OnInit, forwardRef, Input, ViewChild } from '@angular/core';
+import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
 import { config, TsControlValueAccessor } from '../../../../core';
-import { MAT_DATE_FORMATS, DateAdapter, NativeDateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { TS_DATE_FORMATS, TsDateAdapter } from './ts-date.adapter';
 
-export const DD_MM_YYYY_FORMAT = {
-  parse: {
-    dateInput: 'DD/MM/YYYY',
-  },
-  display: {
-    dateInput: 'DD/MM/YYYY',
-    monthYearLabel: 'MMM YYYY',
-    dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM YYYY',
-  },
-};
 
 @Component({
   selector: 'ts-calendar',
@@ -27,8 +17,8 @@ export const DD_MM_YYYY_FORMAT = {
       useExisting: forwardRef(() => TsCalendarComponent),
       multi: true
     },
-    { provide: MAT_DATE_LOCALE, useValue: 'en-US' },
-    { provide: MAT_DATE_FORMATS, useValue: DD_MM_YYYY_FORMAT }
+    { provide: DateAdapter, useClass: TsDateAdapter },
+    { provide: MAT_DATE_FORMATS, useValue: TS_DATE_FORMATS }
   ]
 })
 export class TsCalendarComponent extends TsControlValueAccessor implements OnInit {
@@ -43,25 +33,28 @@ export class TsCalendarComponent extends TsControlValueAccessor implements OnIni
   @Input() min: Date = null;
   @Input() startView = 'multi-year';
 
-  private _calendarValue: string;
+  @ViewChild('inputModelRef', { static: false }) el: NgModel;
+
+  private _calendarValue: Date;
 
   ngOnInit() {
   }
 
-  get calendarValue(): string {
+  get calendarValue(): Date {
     return this._calendarValue;
   }
 
-  set calendarValue(val: string) {
-    this._calendarValue = val;
-    if (val) {
+  set calendarValue(val: Date) {
+    if (val && !this.el.control.errors) {
+      this._calendarValue = val;
       this.onChangePropagation(val);
     } else {
-      this.onChangePropagation('');
+      this._calendarValue = undefined;
+      this.onChangePropagation();
     }
   }
 
-  writeValue(value: string): void {
+  writeValue(value: Date): void {
     this.calendarValue = value;
   }
 

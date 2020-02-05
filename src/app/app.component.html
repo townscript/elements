@@ -1,4 +1,4 @@
-<form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+<form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit(formElement)">
   <ts-input-text [autofocus]="true" [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName"
     [name]="'name'" maxlength="100">
   </ts-input-text>
@@ -61,10 +61,11 @@
   </ts-checkbox-list>
   <p>Value: {{myCheckboxListVal | json}}</p>
 
-  <ts-calendar placeholder="DOB" [required]="true" name="dob" [disabled]="false" [(ngModel)]="myDOB"></ts-calendar>
-  <p>Value: {{myDOB}}</p>
+  <ts-calendar placeholder="DOB" [required]="true" name="dob" [disabled]="false" [(ngModel)]="myDOB" [max]="maxDate"
+    [min]="minDate"></ts-calendar>
+  <p>Value: {{myDOB | date: 'dd/MM/yyyy'}}</p>
 
-  <ts-button [disabled]="formElement.invalid" width="100%" [(progress)]="showError">
+  <ts-button width="100%" [(progress)]="showError">
     Proceed
   </ts-button>
 

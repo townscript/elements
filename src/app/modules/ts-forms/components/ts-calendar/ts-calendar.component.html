@@ -1,6 +1,15 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
-    <input matInput [matDatepicker]="picker" [placeholder]="placeholder" [required]="required"
-        [(ngModel)]="calendarValue" [name]="name" (blur)="onBlur()" [disabled]="disabled" [max]="max" [min]="min">
+    <input matInput [matDatepicker]="picker" [placeholder]="placeholder" [required]="required" type="tel"
+        [value]="calendarValue" [name]="name" (blur)="onBlur()" [disabled]="disabled" [max]="max" [min]="min"
+        [(ngModel)]="calendarValue" #inputModelRef="ngModel">
+    <mat-hint *ngIf="!calendarValue">DD / MM / YYYY</mat-hint>
+    <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
+        <span *ngIf="inputModelRef?.errors?.required">Fill date in DD / MM / YYYY</span>
+        <span *ngIf="inputModelRef?.errors?.matDatepickerMax">Maximum allowed date is
+            {{ max | date: 'dd/MM/yyyy'}}</span>
+        <span *ngIf="inputModelRef?.errors?.matDatepickerMin">Minimum allowed date is
+            {{ min | date: 'dd/MM/yyyy'}}</span>
+    </mat-error>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker [color]="state" [startView]="startView"></mat-datepicker>
 </mat-form-field>

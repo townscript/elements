@@ -70,7 +70,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     ContactValidatorDirective,
     TsRadiosComponent,
     TsCheckboxListComponent,
-    TsCalendarComponent
+    TsCalendarComponent,
   ],
   exports: [
     TsInputTextComponent,

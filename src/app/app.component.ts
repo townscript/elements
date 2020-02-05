@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Option } from './modules/ts-forms/components';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'bottom-sheet-overview-example-sheet',
@@ -64,6 +65,8 @@ export class AppComponent implements OnInit {
   myCheckboxListVal = undefined;
   myAddress = '';
   myDOB = undefined;
+  maxDate = new Date(2000, 11, 31);
+  minDate = new Date(1900, 0, 1);
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };
@@ -76,7 +79,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit = () => {
+  onSubmit = (form: NgForm) => {
+    if (form.invalid) {
+      return;
+    }
     alert('Form submitted!');
   }
 
