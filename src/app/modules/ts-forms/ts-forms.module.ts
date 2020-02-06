@@ -26,7 +26,8 @@ import {
   ContactValidatorDirective,
   TsRadiosComponent,
   TsCheckboxListComponent,
-  TsCalendarComponent
+  TsCalendarComponent,
+  TsInputTimeComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -71,6 +72,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsRadiosComponent,
     TsCheckboxListComponent,
     TsCalendarComponent,
+    TsInputTimeComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -91,7 +93,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsTextareaComponent,
     TsRadiosComponent,
     TsCheckboxListComponent,
-    TsCalendarComponent
+    TsCalendarComponent,
+    TsInputTimeComponent
   ]
 })
 export class TsFormsModule { }

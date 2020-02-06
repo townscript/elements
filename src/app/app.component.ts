@@ -67,6 +67,7 @@ export class AppComponent implements OnInit {
   myDOB = undefined;
   maxDate = new Date(2000, 11, 31);
   minDate = new Date(1900, 0, 1);
+  myTime = undefined;
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };

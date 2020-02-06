@@ -5,10 +5,10 @@
     <mat-hint *ngIf="!calendarValue">DD / MM / YYYY</mat-hint>
     <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
         <span *ngIf="inputModelRef?.errors?.required">Fill date in DD / MM / YYYY</span>
-        <span *ngIf="inputModelRef?.errors?.matDatepickerMax">Maximum allowed date is
-            {{ max | date: 'dd/MM/yyyy'}}</span>
-        <span *ngIf="inputModelRef?.errors?.matDatepickerMin">Minimum allowed date is
-            {{ min | date: 'dd/MM/yyyy'}}</span>
+        <span *ngIf="inputModelRef?.errors?.matDatepickerMax">Date after {{ max | date: 'dd/MM/yyyy'}} is not
+            acceptable</span>
+        <span *ngIf="inputModelRef?.errors?.matDatepickerMin">Date before {{ min | date: 'dd/MM/yyyy'}} is not
+            acceptable</span>
     </mat-error>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker [color]="state" [startView]="startView"></mat-datepicker>

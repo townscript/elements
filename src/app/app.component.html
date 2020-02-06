@@ -65,6 +65,10 @@
     [min]="minDate"></ts-calendar>
   <p>Value: {{myDOB | date: 'dd/MM/yyyy'}}</p>
 
+  <ts-input-time placeholder="Best Time" [required]="true" name="time" [disabled]="false" [(ngModel)]="myTime">
+  </ts-input-time>
+  <p>Value: {{myTime}}</p>
+
   <ts-button width="100%" [(progress)]="showError">
     Proceed
   </ts-button>
