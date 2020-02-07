@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, Input } from '@angular/core';
+import { Component, OnInit, forwardRef, Input, ViewEncapsulation } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TsControlValueAccessor } from '../../../../core';
 import { Option } from '../ts-select/ts-select.component';
@@ -14,7 +14,8 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => TsCheckboxListComponent),
     multi: true
-  }]
+  }],
+  encapsulation: ViewEncapsulation.None
 })
 export class TsCheckboxListComponent extends TsControlValueAccessor implements OnInit {
 
@@ -34,10 +35,8 @@ export class TsCheckboxListComponent extends TsControlValueAccessor implements O
     this._selectedValues = values;
     if (this.required && (!values || values.length < 1)) {
       this.onChangePropagation();
-      this.onTouchedPropagation();
     } else {
       this.onChangePropagation(values);
-      this.onTouchedPropagation(values);
     }
   }
 
@@ -64,6 +63,7 @@ export class TsCheckboxListComponent extends TsControlValueAccessor implements O
     } else {
       this.selectedValues = this.selectedValues.filter(o => o.value !== value);
     }
+    this.onTouchedPropagation(this.selectedValues);
   }
 
   checked = (opt: Option): boolean => {

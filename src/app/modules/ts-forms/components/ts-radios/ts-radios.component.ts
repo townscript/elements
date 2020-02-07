@@ -2,6 +2,7 @@ import { Component, OnInit, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TsControlValueAccessor } from '../../../../core';
 import { Option } from '../ts-select/ts-select.component';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'ts-radios',
@@ -32,11 +33,9 @@ export class TsRadiosComponent extends TsControlValueAccessor implements OnInit 
   set radioValue(val: boolean) {
     this._radioValue = val;
     if (this.required && val === undefined) {
-      this.onChangePropagation('');
-      this.onTouchedPropagation('');
+      this.onChangePropagation();
     } else {
       this.onChangePropagation(val);
-      this.onTouchedPropagation(val);
     }
   }
 
@@ -46,5 +45,9 @@ export class TsRadiosComponent extends TsControlValueAccessor implements OnInit 
 
   writeValue(value: boolean): void {
     this.radioValue = value;
+  }
+
+  radioChange(event: MatRadioChange) {
+    this.onTouchedPropagation(this.radioValue);
   }
 }
