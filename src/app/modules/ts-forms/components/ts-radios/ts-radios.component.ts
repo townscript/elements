@@ -44,7 +44,9 @@ export class TsRadiosComponent extends TsControlValueAccessor implements OnInit 
   }
 
   writeValue(value: boolean): void {
-    this.radioValue = value;
+    if (value) {
+      this.radioValue = value;
+    }
   }
 
   radioChange(event: MatRadioChange) {

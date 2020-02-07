@@ -45,7 +45,9 @@ export class TsCheckboxListComponent extends TsControlValueAccessor implements O
   }
 
   writeValue(values: Array<Option>): void {
-    this.selectedValues = values;
+    if (values) {
+      this.selectedValues = values;
+    }
   }
 
   private readonly getOption = (value: any): Option => {
