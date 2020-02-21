@@ -45,11 +45,18 @@ export class TsCalendarComponent extends TsControlValueAccessor implements OnIni
   }
 
   set calendarValue(val: Date) {
-    if (val && !this.el.control.errors) {
-      this._calendarValue = val;
+    this._calendarValue = val;
+    if (val) {
       this.onChangePropagation(val);
     } else {
-      this._calendarValue = undefined;
+      this.onChangePropagation();
+      return;
+    }
+    if (this.max && this.max < val) {
+      this.onChangePropagation();
+      return;
+    }
+    if (this.min && this.min > val) {
       this.onChangePropagation();
     }
   }
