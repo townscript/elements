@@ -18,7 +18,7 @@ import intlTelInput from 'intl-tel-input/build/js/intlTelInput';
 })
 export class TsInputContactComponent extends TsControlValueAccessor implements OnInit, AfterViewInit {
 
-  @Input() placeholder = 'Placeholder';
+  @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;

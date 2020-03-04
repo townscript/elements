@@ -17,7 +17,7 @@ import { RegEx } from '../../../../shared/regex.constant';
 })
 export class TsInputTimeComponent extends TsControlValueAccessor implements OnInit {
 
-  @Input() placeholder = 'Placeholder';
+  @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;

@@ -17,7 +17,7 @@ import { TSCreditCardValidator } from './ts-card.valiator';
 })
 export class TsInputCardComponent extends TsControlValueAccessor implements OnInit {
 
-  @Input() placeholder = 'Placeholder';
+  @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;

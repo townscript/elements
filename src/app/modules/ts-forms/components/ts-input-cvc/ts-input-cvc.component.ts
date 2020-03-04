@@ -16,7 +16,7 @@ import { config, TsControlValueAccessor } from '../../../../core';
 })
 export class TsInputCvcComponent extends TsControlValueAccessor implements OnInit {
 
-  @Input() placeholder = 'Placeholder';
+  @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;

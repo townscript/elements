@@ -17,7 +17,7 @@ import { CreditCardValidator } from 'angular-cc-library';
 })
 export class TsInputExpiryComponent extends TsControlValueAccessor implements OnInit {
 
-  @Input() placeholder = 'Placeholder';
+  @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;
