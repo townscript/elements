@@ -8,7 +8,7 @@
       type.</span>
   </mat-error>
 </mat-form-field>
-<mat-form-field *ngIf="type === 'email'">
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" *ngIf="type === 'email'">
   <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
     [minlength]="minlength" #emailModelRef="ngModel">
