@@ -1,4 +1,4 @@
 <mat-form-field class="ts-contact" [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
-  <input matInput type="tel" [placeholder]="placeholder" [required]="required" [name]="name" (blur)="onBlur()" #contact
+  <input matInput type="tel" [placeholder]="placeholder" [required]="required" [disabled]="disabled" [name]="name" (blur)="onBlur()" #contact
     [(ngModel)]="contactValue" (countrychange)="onCountryChange($event.target.value)" trim="blur" appContactValidate>
 </mat-form-field>

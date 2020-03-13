@@ -21,6 +21,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
+  @Input() disabled = false;
   @Input() name: string;
   @Input() country?: string;
   @ViewChild('contact', { static: false }) contactEl: ElementRef;
