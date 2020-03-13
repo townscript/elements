@@ -20,6 +20,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
+  @Input() disabled = false;
   @Input() name: string;
   @Input() type = 'text';
   @Input() pattern = /.*/;
@@ -29,7 +30,7 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   @Input() minlength?: number;
 
   ngOnInit() {
-    if (this.type == 'email') {
+    if (this.type === 'email') {
       this.pattern = RegEx.email;
     } else if (!this.pattern) {
       this.pattern = /.*/;

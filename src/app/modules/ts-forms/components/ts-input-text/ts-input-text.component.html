@@ -1,7 +1,7 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" *ngIf="type !== 'email'">
   <input matInput [autofocus]="autofocus" [type]="type" [placeholder]="placeholder" [required]="required"
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" trim="blur" [maxlength]="maxlength"
-    [minlength]="minlength" #inputModelRef="ngModel">
+    [minlength]="minlength" #inputModelRef="ngModel" [disabled]="disabled">
   <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
     <span *ngIf="inputModelRef?.errors?.minlength">Input length can't be less than {{minlength}}.</span>
     <span *ngIf="inputModelRef?.errors?.pattern && !inputModelRef?.errors?.minlength">Please enter valid input
@@ -11,5 +11,5 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" *ngIf="type === 'email'">
   <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
-    [minlength]="minlength" #emailModelRef="ngModel">
+    [minlength]="minlength" [disabled]="disabled" #emailModelRef="ngModel">
 </mat-form-field>
