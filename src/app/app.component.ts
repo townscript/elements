@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
   maxDate = new Date(2000, 11, 31);
   minDate = new Date(1900, 0, 1);
   myTime = undefined;
+  mySlidetoggleVal = true;
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };
@@ -99,5 +100,9 @@ export class AppComponent implements OnInit {
 
   checkBoxChangeCall = () => {
     console.log('checkbox value is ' + this.myCheckboxVal);
+  }
+
+  slideToggleChangeCall = () => {
+    console.log('Slide toggle value is ' + this.mySlidetoggleVal);
   }
 }

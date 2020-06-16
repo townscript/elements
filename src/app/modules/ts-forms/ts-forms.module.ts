@@ -5,6 +5,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutofocusFixModule } from 'ngx-autofocus-fix';
 
@@ -27,7 +28,8 @@ import {
   TsRadiosComponent,
   TsCheckboxListComponent,
   TsCalendarComponent,
-  TsInputTimeComponent
+  TsInputTimeComponent,
+  TsSlideToggleComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -51,6 +53,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatRadioModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatSlideToggleModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -72,7 +75,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsRadiosComponent,
     TsCheckboxListComponent,
     TsCalendarComponent,
-    TsInputTimeComponent
+    TsInputTimeComponent,
+    TsSlideToggleComponent
   ],
   exports: [
     TsInputTextComponent,
@@ -94,7 +98,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsRadiosComponent,
     TsCheckboxListComponent,
     TsCalendarComponent,
-    TsInputTimeComponent
+    TsInputTimeComponent,
+    TsSlideToggleComponent
   ]
 })
 export class TsFormsModule { }
