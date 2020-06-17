@@ -36,6 +36,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -53,6 +55,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatRadioModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     MatSlideToggleModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],

@@ -7,7 +7,7 @@ import { MatSlideToggleChange } from '@angular/material';
   selector: 'ts-slide-toggle',
   templateUrl: './ts-slide-toggle.component.html',
   styleUrls: [
-    // './ts-slide-toggle.component.scss'
+    './ts-slide-toggle.component.scss'
   ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
