@@ -40,11 +40,11 @@
     [required]="true" imageSource="favicon.ico"></ts-box-radio>
   <p>Value: {{myRadio}}</p>
 
-  <ts-slide-toggle name="mySlideToggle" [required]="true" [disabled]="false"
+  <ts-slide-toggle name="mySlideToggle" [required]="true" [disabled]="false" [color]="'accent'"
     [(ngModel)]="mySlidetoggleVal" (ngModelChange)="slideToggleChangeCall()">
     Test slide toggle
   </ts-slide-toggle>
-  <p>Value: {{mySlidetoggleVal}}</p>
+  <p>Slide toggle value: {{mySlidetoggleVal}}</p>
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 

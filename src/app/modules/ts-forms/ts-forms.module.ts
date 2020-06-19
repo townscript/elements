@@ -36,8 +36,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -55,8 +53,6 @@ import { BrowserModule } from '@angular/platform-browser';
     MatRadioModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     MatSlideToggleModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
@@ -80,7 +76,7 @@ import { BrowserModule } from '@angular/platform-browser';
     TsCheckboxListComponent,
     TsCalendarComponent,
     TsInputTimeComponent,
-    TsSlideToggleComponent
+    TsSlideToggleComponent,
   ],
   exports: [
     TsInputTextComponent,
@@ -103,7 +99,7 @@ import { BrowserModule } from '@angular/platform-browser';
     TsCheckboxListComponent,
     TsCalendarComponent,
     TsInputTimeComponent,
-    TsSlideToggleComponent
+    TsSlideToggleComponent,
   ]
 })
 export class TsFormsModule { }

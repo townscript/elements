@@ -1,13 +1,13 @@
 import { Component, OnInit, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TsControlValueAccessor } from '../../../../core';
-import { MatSlideToggleChange } from '@angular/material';
+import { ThemePalette } from '@angular/material';
 
 @Component({
   selector: 'ts-slide-toggle',
   templateUrl: './ts-slide-toggle.component.html',
   styleUrls: [
-    './ts-slide-toggle.component.scss'
+    // './ts-slide-toggle.component.scss'
   ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
@@ -20,7 +20,7 @@ export class TsSlideToggleComponent extends TsControlValueAccessor implements On
   @Input() required = false;
   @Input() name: string;
   @Input() disabled = false;
-  @Input() color = '#999999';
+  @Input() color: ThemePalette = 'primary';
 
   private _slideToggleValue: boolean;
   get slideToggleValue(): boolean {
