@@ -1,9 +1,7 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { config, TsControlValueAccessor } from '../../../../core';
 import { Option } from '../ts-select/ts-select.component';
-import {FormControl} from '@angular/forms';
-
 
 @Component({
   selector: 'ts-autocomplete',
