@@ -53,7 +53,9 @@ export class AppComponent implements OnInit {
   myEmail = '';
   myContact = '';
   myGender: Option;
+  myCity: Option;
   options: Array<Option> = [];
+  autoOptions: Array<Option> = [];
   myCard = '';
   myExpiry = '';
   panelOpen = false;
@@ -76,6 +78,12 @@ export class AppComponent implements OnInit {
     option = { text: 'Female', value: 'Female' };
     this.options.push(option);
     this.myGender = option;
+
+    let autoOption: Option = { text: 'Bengaluru', value: 'Bengaluru' };
+    this.autoOptions.push(autoOption);
+    autoOption = { text: 'Pune', value: 'Pune' };
+    this.autoOptions.push(autoOption);
+    this.myCity = autoOption;
   }
 
   ngOnInit() {

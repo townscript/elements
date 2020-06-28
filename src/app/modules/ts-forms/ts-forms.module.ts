@@ -29,13 +29,15 @@ import {
   TsCheckboxListComponent,
   TsCalendarComponent,
   TsInputTimeComponent,
-  TsSlideToggleComponent
+  TsSlideToggleComponent,
+  TsAutocompleteComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatAutocompleteModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -54,6 +56,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatNativeDateModule,
     MatDatepickerModule,
     MatSlideToggleModule,
+    MatAutocompleteModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -77,6 +80,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsCalendarComponent,
     TsInputTimeComponent,
     TsSlideToggleComponent,
+    TsAutocompleteComponent,
   ],
   exports: [
     TsInputTextComponent,
@@ -100,6 +104,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsCalendarComponent,
     TsInputTimeComponent,
     TsSlideToggleComponent,
+    TsAutocompleteComponent
   ]
 })
 export class TsFormsModule { }

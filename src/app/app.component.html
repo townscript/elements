@@ -22,6 +22,10 @@
     [options]="options" modelObject="true"></ts-select>
   <p>Value: {{myGender | json}}</p>
 
+  <ts-autocomplete [placeholder]="'Please select your city'" [required]="true" [(ngModel)]="myCity" [name]="'city'"
+    [options]="autoOptions"></ts-autocomplete>
+  <p>Value: {{myCity | json}}</p>
+
   <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'">
   </ts-input-card>
   <p>Value: {{myCard}}</p>
@@ -42,9 +46,8 @@
 
   <ts-slide-toggle name="mySlideToggle" [required]="true" [disabled]="false" [color]="'accent'"
     [(ngModel)]="mySlidetoggleVal" (ngModelChange)="slideToggleChangeCall()">
-    Test slide toggle
   </ts-slide-toggle>
-  <p>Slide toggle value: {{mySlidetoggleVal}}</p>
+  <p>Value: {{mySlidetoggleVal}}</p>
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 

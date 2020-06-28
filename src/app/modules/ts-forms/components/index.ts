@@ -18,3 +18,4 @@ export * from './ts-checkbox-list/ts-checkbox-list.component';
 export * from './ts-calendar/ts-calendar.component';
 export * from './ts-input-time/ts-input-time.component';
 export * from './ts-slide-toggle/ts-slide-toggle.component';
+export * from './ts-autocomplete/ts-autocomplete.component';

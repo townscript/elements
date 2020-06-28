@@ -1,0 +1,11 @@
+<mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" [formGroup]="form">
+    <input type="text" placeholder="{{placeholder}}" [name]="name"
+        matInput [matAutocomplete]="auto" formControlName="value">
+
+    <mat-autocomplete #auto="matAutocomplete" [name]="'temp-name'" [(ngModel)]="selectValue" [ngModelOptions]="{standalone: true}">
+        <mat-option disabled>Select</mat-option>
+        <mat-option *ngFor="let option of options" [value]="option">
+            {{option.text}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
