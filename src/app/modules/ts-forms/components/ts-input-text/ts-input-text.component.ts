@@ -18,7 +18,7 @@ import { RegEx } from '../../../../shared/regex.constant';
 export class TsInputTextComponent extends TsControlValueAccessor implements OnInit {
 
   @Input() placeholder = '';
-  floatLabel = config.floatLabel;
+  @Input() floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() disabled = false;
   @Input() name: string;
