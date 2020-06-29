@@ -4,18 +4,18 @@ import { config, TsControlValueAccessor } from '../../../../core';
 import { Option } from '../ts-select/ts-select.component';
 
 @Component({
-  selector: 'ts-autocomplete',
-  templateUrl: './ts-autocomplete.component.html',
+  selector: 'ts-select-edit',
+  templateUrl: './ts-select-edit.component.html',
   styleUrls: [
-    // './ts-autocomplete.component.scss'
+    // './ts-select-edit.component.scss'
   ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => TsAutocompleteComponent),
+    useExisting: forwardRef(() => TsSelectEditComponent),
     multi: true
   }]
 })
-export class TsAutocompleteComponent extends TsControlValueAccessor implements OnInit {
+export class TsSelectEditComponent extends TsControlValueAccessor implements OnInit {
 
   @Input() placeholder = '';
   floatLabel = config.floatLabel;
