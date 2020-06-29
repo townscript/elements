@@ -1,5 +1,6 @@
-import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { Component, forwardRef, Input, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { config, TsControlValueAccessor } from '../../../../core';
 import { Option } from '../ts-select/ts-select.component';
 
@@ -15,8 +16,9 @@ import { Option } from '../ts-select/ts-select.component';
     multi: true
   }]
 })
-export class TsSelectEditComponent extends TsControlValueAccessor implements OnInit {
+export class TsSelectEditComponent extends TsControlValueAccessor implements OnInit, OnDestroy {
 
+  private readonly subscriptions: Subscription[] = [];
   @Input() placeholder = '';
   floatLabel = config.floatLabel;
   @Input() required = false;
@@ -32,7 +34,12 @@ export class TsSelectEditComponent extends TsControlValueAccessor implements OnI
 
   ngOnInit() {
     this.form = this._fb.group({value: ['', []]});
-    this.form.valueChanges.subscribe(data => this.onChange(data, true));
+    const subscription = this.form.valueChanges.subscribe(data => this.onChange(data, true));
+    this.subscriptions.push(subscription);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
   get selectValue(): Option {
