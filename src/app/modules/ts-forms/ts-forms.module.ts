@@ -5,6 +5,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutofocusFixModule } from 'ngx-autofocus-fix';
 
@@ -27,13 +28,16 @@ import {
   TsRadiosComponent,
   TsCheckboxListComponent,
   TsCalendarComponent,
-  TsInputTimeComponent
+  TsInputTimeComponent,
+  TsSlideToggleComponent,
+  TsSelectEditComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatAutocompleteModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -51,6 +55,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatRadioModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatSlideToggleModule,
+    MatAutocompleteModule,
     AutofocusFixModule.forRoot({ triggerDetectChanges: true })
   ],
   declarations: [
@@ -72,7 +78,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsRadiosComponent,
     TsCheckboxListComponent,
     TsCalendarComponent,
-    TsInputTimeComponent
+    TsInputTimeComponent,
+    TsSlideToggleComponent,
+    TsSelectEditComponent,
   ],
   exports: [
     TsInputTextComponent,
@@ -94,7 +102,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TsRadiosComponent,
     TsCheckboxListComponent,
     TsCalendarComponent,
-    TsInputTimeComponent
+    TsInputTimeComponent,
+    TsSlideToggleComponent,
+    TsSelectEditComponent
   ]
 })
 export class TsFormsModule { }

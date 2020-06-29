@@ -1,6 +1,6 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
     <input matInput [matDatepicker]="picker" [placeholder]="placeholder" [required]="required" type="tel" [name]="name"
-        (blur)="onBlur()" [disabled]="disabled" [max]="max" [min]="min" [(ngModel)]="calendarValue"
+        (blur)="onBlur()" (click)="picker.open()" [disabled]="disabled" [max]="max" [min]="min" [(ngModel)]="calendarValue"
         #inputModelRef="ngModel">
     <mat-hint *ngIf="!calendarValue">DD / MM / YYYY</mat-hint>
     <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">

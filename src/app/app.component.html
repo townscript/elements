@@ -1,6 +1,6 @@
 <form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit(formElement)">
   <ts-input-text [autofocus]="true" [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName"
-    [name]="'name'" maxlength="100">
+    [name]="'name'" maxlength="100" prefixText="Mr./Mrs./Ms." floatLabel="never">
   </ts-input-text>
   <p>Value: {{myName}}</p>
 
@@ -22,6 +22,10 @@
     [options]="options" modelObject="true"></ts-select>
   <p>Value: {{myGender | json}}</p>
 
+  <ts-select-edit [placeholder]="'Please select your city'" [required]="true" [(ngModel)]="myCity" [name]="'city'"
+    [options]="autoOptions"></ts-select-edit>
+  <p>Value: {{myCity | json}}</p>
+
   <ts-input-card [placeholder]="'Please enter card number'" [required]="true" [(ngModel)]="myCard" [name]="'card'">
   </ts-input-card>
   <p>Value: {{myCard}}</p>
@@ -39,6 +43,11 @@
   <ts-box-radio name="myRadio" value="actionValue2" text="Action 2" color="purple" [(ngModel)]="myRadio"
     [required]="true" imageSource="favicon.ico"></ts-box-radio>
   <p>Value: {{myRadio}}</p>
+
+  <ts-slide-toggle name="mySlideToggle" [required]="true" [disabled]="false" [color]="'accent'"
+    [(ngModel)]="mySlidetoggleVal" (ngModelChange)="slideToggleChangeCall()">
+  </ts-slide-toggle>
+  <p>Value: {{mySlidetoggleVal}}</p>
 
   <ts-progress-spinner>Loading...</ts-progress-spinner>
 
