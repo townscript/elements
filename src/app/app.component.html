@@ -9,7 +9,7 @@
   </ts-input-text>
   <p>Value: {{myEmail}}</p>
 
-  <ts-input-contact placeholder="Phone Number" [required]="true" name="contact" [(ngModel)]="myContact" country="IN">
+  <ts-input-contact placeholder="Phone Number" [required]="true" name="contact" [(ngModel)]="myContact" country="IN" pattern="[0-9]+">
   </ts-input-contact>
   <p>Value: {{myContact}}</p>
 
