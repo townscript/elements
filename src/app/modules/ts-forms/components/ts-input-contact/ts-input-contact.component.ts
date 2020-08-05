@@ -24,6 +24,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   @Input() disabled = false;
   @Input() name: string;
   @Input() country?: string;
+  @Input() pattern = /.*/;
   @ViewChild('contact', { static: false }) contactEl: ElementRef;
   iti: any;
   private _contactValue: string;
@@ -56,11 +57,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
 
   set contactValue(val: string) {
     this._contactValue = val;
-    if (this.iti.isValidNumber()) {
-      this.onChangePropagation(this.iti.getNumber());
-    } else {
-      this.onChangePropagation('');
-    }
+    this.onChangePropagation(this.iti.isValidNumber() ? this.iti.getNumber() : '')
   }
 
   writeValue(value: string): void {
