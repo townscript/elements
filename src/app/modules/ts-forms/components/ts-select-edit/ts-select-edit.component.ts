@@ -25,9 +25,9 @@ export class TsSelectEditComponent extends TsControlValueAccessor implements OnI
   @Input() name: string;
   @Input() options: Array<Option>;
   @Input() disabled = false;
+  @Input() isDefaultRequired = true;
   form: FormGroup;
   private _selectValue: Option;
-  @Input() isDefaultRequired = true;
 
   constructor(private _fb: FormBuilder) {
     super();
