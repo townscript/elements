@@ -1,8 +1,8 @@
 <mat-form-field [floatLabel]="floatLabel" [hideRequiredMarker]="!required" [formGroup]="form">
-    <input type="text" placeholder="{{placeholder}}" [name]="name"
-        matInput [matAutocomplete]="auto" formControlName="value">
+    <input type="text" placeholder="{{placeholder}}" [name]="name" matInput [matAutocomplete]="auto"
+        formControlName="value">
     <mat-autocomplete #auto="matAutocomplete">
-        <mat-option disabled>Select</mat-option>
+        <mat-option *ngIf="showDefaultSelect" disabled>Select</mat-option>
         <mat-option *ngFor="let option of options" [value]="option">
             {{option.text}}
         </mat-option>

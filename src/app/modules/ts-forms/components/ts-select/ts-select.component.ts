@@ -1,6 +1,6 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {config, TsControlValueAccessor} from '../../../../core';
-import {NG_VALUE_ACCESSOR} from '@angular/forms';
+import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { config, TsControlValueAccessor } from '../../../../core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'ts-select',
@@ -16,13 +16,13 @@ import {NG_VALUE_ACCESSOR} from '@angular/forms';
 })
 export class TsSelectComponent extends TsControlValueAccessor implements OnInit {
   @Input() placeholder = '';
-  floatLabel = config.floatLabel;
   @Input() required = false;
   @Input() name: string;
   @Input() options: Array<Option>;
-  private _selectValue: string;
   @Input() modelObject = false;
   @Input() disabled = false;
+  private _selectValue: string;
+  floatLabel = config.floatLabel;
 
   get selectValue(): string {
     return this._selectValue;

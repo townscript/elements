@@ -27,13 +27,14 @@ export class TsSelectEditComponent extends TsControlValueAccessor implements OnI
   @Input() disabled = false;
   form: FormGroup;
   private _selectValue: Option;
+  @Input() showDefaultSelect = true;
 
   constructor(private _fb: FormBuilder) {
     super();
   }
 
   ngOnInit() {
-    this.form = this._fb.group({value: ['', []]});
+    this.form = this._fb.group({ value: ['', []] });
     const subscription = this.form.valueChanges.subscribe(data => this.onChange(data, true));
     this.subscriptions.push(subscription);
   }
@@ -58,7 +59,7 @@ export class TsSelectEditComponent extends TsControlValueAccessor implements OnI
   }
 
   onChange = (val: Option, isChangedFromInput: boolean) => {
-    let tempValue = val && val.value && val.value.value? val.value.value : (val && val.value) ? val.value : val;
+    let tempValue = val && val.value && val.value.value ? val.value.value : (val && val.value) ? val.value : val;
     if (tempValue instanceof Object) {
       tempValue = "";
     }
