@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { config, TsControlValueAccessor } from '../../../../core';
-import { CreditCardValidator } from 'angular-cc-library';
+import { CreditCardValidators } from 'angular-cc-library';
 
 @Component({
   selector: 'ts-input-expiry',
@@ -30,7 +30,7 @@ export class TsInputExpiryComponent extends TsControlValueAccessor implements On
 
   ngOnInit() {
     this.form = this._fb.group({
-      ccExpiry: ['', [<any>CreditCardValidator.validateExpDate]]
+      ccExpiry: ['', [CreditCardValidators.validateExpDate as any]]
     });
   }
 

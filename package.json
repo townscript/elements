@@ -1,6 +1,6 @@
 {
   "name": "@townscript/elements",
-  "version": "3.0.73",
+  "version": "4.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "ng-packagr -p ng-package.json",
-    "publish": "npm run build && npm publish dist"
+    "publish": "npm run build && npm publish dist",
+    "postinstall": "ngcc"
   },
   "private": false,
   "dependencies": {
@@ -25,7 +26,7 @@
     "@angular/platform-browser": "^9.1.13",
     "@angular/platform-browser-dynamic": "^9.1.13",
     "@angular/router": "^9.1.13",
-    "angular-cc-library": "^1.2.5",
+    "angular-cc-library": "^2.0.1",
     "core-js": "^2.5.4",
     "intl-tel-input": "^16.0.5",
     "ng2-trim-directive": "^2.3.2",
