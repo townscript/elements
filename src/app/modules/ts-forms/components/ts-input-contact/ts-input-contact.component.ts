@@ -25,7 +25,7 @@ export class TsInputContactComponent extends TsControlValueAccessor implements O
   @Input() name: string;
   @Input() country?: string;
   @Input() pattern = /.*/;
-  @ViewChild('contact', { static: false }) contactEl: ElementRef;
+  @ViewChild('contact') contactEl: ElementRef;
   iti: any;
   private _contactValue: string;
 

@@ -25,7 +25,7 @@ export class TsInputTimeComponent extends TsControlValueAccessor implements OnIn
   private _timeValue: string;
   @Input() autofocus = false;
 
-  @ViewChild('inputModelRef', { static: false }) el: NgModel;
+  @ViewChild('inputModelRef') el: NgModel;
 
   ngOnInit() {
   }
