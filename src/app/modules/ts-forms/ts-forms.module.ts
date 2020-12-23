@@ -37,7 +37,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatAutocompleteModule } from '@angular/material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   imports: [

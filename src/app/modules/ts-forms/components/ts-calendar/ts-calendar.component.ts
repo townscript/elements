@@ -33,7 +33,7 @@ export class TsCalendarComponent extends TsControlValueAccessor implements OnIni
   @Input() min: Date = null;
   @Input() startView = 'multi-year';
 
-  @ViewChild('inputModelRef', { static: false }) el: NgModel;
+  @ViewChild('inputModelRef') el: NgModel;
 
   private _calendarValue: Date;
 

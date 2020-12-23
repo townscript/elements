@@ -1,7 +1,7 @@
 import { Component, OnInit, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TsControlValueAccessor } from '../../../../core';
-import { ThemePalette } from '@angular/material';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'ts-slide-toggle',
