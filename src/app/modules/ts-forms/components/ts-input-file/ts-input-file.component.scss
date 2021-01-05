@@ -37,12 +37,13 @@ input[type="file"] {
     flex-direction: column;
     width: 34rem;
     justify-content: center;
+    margin-top: 0.4rem;
 }
 
 progress {
     border-radius: 2px; 
     width: 34rem;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 progress::-webkit-progress-bar {
@@ -59,12 +60,9 @@ progress::-webkit-progress-value {
 
 .file-icon{
     margin-right: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .delete-file{
-    transform:rotate(45deg); 
     height: 1.5rem;
     margin-left: 1.3rem;
     margin-top: 0.5rem;

@@ -4,12 +4,12 @@
         <input id="file-upload" type="file" (change)="setUploadedFileValue($event)" />
     </div>
     <div *ngIf="uploadedFile" class="show-progress-bar">
-        <img src="https://img.icons8.com/material-rounded/24/683592/file--v1.png" alt="" class="file-icon" />
+        <img src="../../../../../assets/images/multi-file.svg" alt="" class="file-icon" />
         <div class="progress-bar">
             <span>{{uploadedFile.name}}</span>
-            <progress value="{{uploadPercentage}}" max="100" *ngIf="uploadPercentage < 100">33%</progress>
+            <progress value="{{uploadPercentage}}" max="100" *ngIf="!uploadComplete"></progress>
         </div>
-        <img class="delete-file" src="https://img.icons8.com/material/24/808080/plus--v1.png" alt=""
+        <img class="delete-file" src="../../../../../assets/images/cancel.svg" alt=""
             (click)="deleteUploadedFileValue()" />
     </div>
 </div>
