@@ -30,7 +30,8 @@ import {
   TsCalendarComponent,
   TsInputTimeComponent,
   TsSlideToggleComponent,
-  TsSelectEditComponent
+  TsSelectEditComponent,
+  TsInputFileComponent
 } from './components/index';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -81,6 +82,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     TsInputTimeComponent,
     TsSlideToggleComponent,
     TsSelectEditComponent,
+    TsInputFileComponent,
   ],
   exports: [
     TsInputTextComponent,
@@ -104,7 +106,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     TsCalendarComponent,
     TsInputTimeComponent,
     TsSlideToggleComponent,
-    TsSelectEditComponent
+    TsSelectEditComponent,
+    TsInputFileComponent
   ]
 })
 export class TsFormsModule { }

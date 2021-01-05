@@ -1,0 +1,72 @@
+@import '../../../../../assets/scss/mat-palette';
+
+.ts-file-upload{
+    font-family: lato;      
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    cursor: pointer;
+    border: 1px solid map-get($ts-purple, 500);
+    border-radius: 3px;
+    color: map-get($ts-purple, 500);
+    display: inline-block;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-stretch: expanded;
+}
+
+.show-progress-bar{
+    background-color: #F5F5F5;
+    width: 40rem;
+    padding: 15px;
+    border-radius: 2px;
+    display: flex;
+    font-size: 15px;
+    cursor: default; 
+}
+
+.progress-bar{
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    justify-content: center;
+}
+
+progress {
+    border-radius: 2px; 
+    width: 34rem;
+    margin-top: 0.7rem;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(126,211,33, 0.2);
+    border-radius: 2px;
+    height: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(126,211,33);
+    border-radius: 2px;
+    height: 5px;
+}
+
+.file-icon{
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.delete-file{
+    transform:rotate(45deg); 
+    height: 1.5rem;
+    margin-left: 1.3rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
