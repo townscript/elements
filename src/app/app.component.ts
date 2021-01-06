@@ -71,7 +71,6 @@ export class AppComponent implements OnInit {
   minDate = new Date(1900, 0, 1);
   myTime = undefined;
   mySlidetoggleVal = true;
-  uploadComplete: boolean;
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
     let option: Option = { text: 'Male', value: 'Male' };
