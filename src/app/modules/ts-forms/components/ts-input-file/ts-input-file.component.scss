@@ -9,7 +9,8 @@ input[type="file"] {
 }
 
 .file-upload {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     cursor: pointer;
     border: 1px solid map-get($ts-purple, 500);
     border-radius: 3px;
@@ -21,28 +22,27 @@ input[type="file"] {
 }
 
 .show-progress-bar{
-    margin-top: 2rem;
+    height: 5rem;
+    margin-top: 1.5rem;
     background-color: #F5F5F5;
-    width: 41rem;
     padding: 15px;
     border-radius: 2px;
     display: flex;
     font-size: 15px;
     cursor: default; 
     align-items: center;
+    justify-content: space-between;
 }
 
 .progress-bar{
     display: flex;
     flex-direction: column;
-    width: 34rem;
     justify-content: center;
     margin-top: 0.4rem;
 }
 
 progress {
     border-radius: 2px; 
-    width: 34rem;
     margin-top: 0.5rem;
 }
 
@@ -66,4 +66,8 @@ progress::-webkit-progress-value {
     height: 1.5rem;
     cursor: pointer;
     margin-left: 0.5rem;
+}
+
+.file-info{
+    display: flex;
 }

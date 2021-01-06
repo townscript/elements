@@ -10,11 +10,19 @@ export class TsInputFileComponent implements OnInit {
   @Input() maxFileSize;
   uploadPercentage: number;
   uploadedFile: any;
+  uploadedFileName: string;
   @Input() uploadComplete: boolean;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
   stopUploadBar = false;
+  @Input() savedFile: string;
+  @Input() acceptedFormats: string;
 
   ngOnInit(): void {
+    if (this.savedFile) {
+      this.uploadedFileName = this.savedFile;
+      this.uploadedFile = {};
+      this.uploadComplete = true;
+    }
   }
 
   emitFileValueChange = () => {
@@ -24,7 +32,8 @@ export class TsInputFileComponent implements OnInit {
   setUploadedFileValue = async (event: any): Promise<any> => {
     this.uploadedFile = undefined;
     this.uploadedFile = event.target.files[0];
-    if (this.uploadedFile.bytes > this.maxFileSize) {
+    this.uploadedFileName = this.uploadedFile.name;
+    if (this.uploadedFile.size > this.maxFileSize) {
       alert('Sorry maximum file limit is ' + this.maxFileSize + ' KB');
       this.uploadedFile = undefined;
       return;
@@ -46,7 +55,7 @@ export class TsInputFileComponent implements OnInit {
     let step = 0.5;
     const interval = setInterval(() => {
       current_progress += step;
-      this.uploadPercentage = Math.round(Math.atan(current_progress) / (Math.PI / 2) * 100 * 1000) / 1000
+      this.uploadPercentage = Math.round(Math.atan(current_progress) / (Math.PI / 2) * 100);
       if (this.uploadPercentage >= 100 || this.stopUploadBar || this.uploadComplete) {
         clearInterval(interval);
       } else if (this.uploadPercentage >= 70) {
