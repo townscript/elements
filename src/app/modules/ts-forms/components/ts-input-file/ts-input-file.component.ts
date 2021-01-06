@@ -33,7 +33,7 @@ export class TsInputFileComponent implements OnInit {
     this.uploadedFile = undefined;
     this.uploadedFile = event.target.files[0];
     this.uploadedFileName = this.uploadedFile.name;
-    if (this.uploadedFile.size > this.maxFileSize) {
+    if (this.uploadedFile.size / 1000 > this.maxFileSize) {
       alert('Sorry maximum file limit is ' + this.maxFileSize + ' KB');
       this.uploadedFile = undefined;
       return;
