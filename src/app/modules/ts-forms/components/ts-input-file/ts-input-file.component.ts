@@ -9,7 +9,7 @@ export class TsInputFileComponent implements OnInit {
   constructor() { }
   @Input() maxFileSize;
   @Input() uploadComplete: boolean;
-  @Input() savedFile: string;
+  @Input() preUploadedFile: string;
   @Input() acceptedFormats: string;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
   @Input() fileIconPath: string;
@@ -20,8 +20,8 @@ export class TsInputFileComponent implements OnInit {
   uploadedFileName: string;
 
   ngOnInit(): void {
-    if (this.savedFile) {
-      this.uploadedFileName = this.savedFile;
+    if (this.preUploadedFile) {
+      this.uploadedFileName = this.preUploadedFile;
       this.uploadedFile = {};
       this.uploadComplete = true;
     }
