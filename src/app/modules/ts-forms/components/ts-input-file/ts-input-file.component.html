@@ -1,18 +1,18 @@
-<div class="ts-file-upload">
+<div class="ts-file">
     <div *ngIf="!uploadedFile">
-        <label for="file-upload" class="file-upload">
+        <label for="file-upload" class="ts-file-btn">
             Upload File
         </label>
         <input id="file-upload" type="file" (change)="setUploadedFileValue($event)" accept={{acceptedFormats}} />
     </div>
-    <div *ngIf="uploadedFile" class="show-progress-bar">
-        <div class="file-info">
+    <div *ngIf="uploadedFile" class="ts-file-progress">
+        <div class="ts-file-info">
             <img src={{fileIconPath}} alt="" class="file-icon" />
-            <div class="progress-bar">
+            <div class="ts-file-progress-bar">
                 <span>{{uploadedFileName}}</span>
                 <progress value="{{uploadPercentage}}" max="100" *ngIf="!uploadComplete"></progress>
             </div>
         </div>
-        <img class="delete-file" src={{deleteIconPath}} alt="" (click)="deleteUploadedFileValue()" />
+        <img class="delete-icon" src={{deleteIconPath}} alt="" (click)="deleteUploadedFileValue()" />
     </div>
 </div>

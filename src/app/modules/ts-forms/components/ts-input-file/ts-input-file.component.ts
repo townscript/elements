@@ -12,12 +12,12 @@ export class TsInputFileComponent implements OnInit {
   @Input() savedFile: string;
   @Input() acceptedFormats: string;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
+  @Input() fileIconPath: string;
+  @Input() deleteIconPath: string;
   stopUploadBar = false;
   uploadPercentage: number;
   uploadedFile: any;
   uploadedFileName: string;
-  fileIconPath = './assets/images/multi-file.svg';
-  deleteIconPath = './assets/images/cancel.svg';
 
   ngOnInit(): void {
     if (this.savedFile) {
