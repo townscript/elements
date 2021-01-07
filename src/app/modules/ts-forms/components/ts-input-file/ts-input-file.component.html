@@ -1,18 +1,18 @@
 <div class="ts-file-upload">
     <div *ngIf="!uploadedFile">
-        <label for="file-upload" class="file-upload">Upload File</label>
-        <input #fileInput id="file-upload" type="file" (change)="setUploadedFileValue($event)"
-            accept={{acceptedFormats}} [(ngModel)]="savedFile" observeFiles />
+        <label for="file-upload" class="file-upload">
+            Upload File
+        </label>
+        <input id="file-upload" type="file" (change)="setUploadedFileValue($event)" accept={{acceptedFormats}} />
     </div>
     <div *ngIf="uploadedFile" class="show-progress-bar">
         <div class="file-info">
-            <img src="../../../../../assets/images/multi-file.svg" alt="" class="file-icon" />
+            <img src={{fileIconPath}} alt="" class="file-icon" />
             <div class="progress-bar">
                 <span>{{uploadedFileName}}</span>
                 <progress value="{{uploadPercentage}}" max="100" *ngIf="!uploadComplete"></progress>
             </div>
         </div>
-        <img class="delete-file" src="../../../../../assets/images/cancel.svg" alt=""
-            (click)="deleteUploadedFileValue()" />
+        <img class="delete-file" src={{deleteIconPath}} alt="" (click)="deleteUploadedFileValue()" />
     </div>
 </div>

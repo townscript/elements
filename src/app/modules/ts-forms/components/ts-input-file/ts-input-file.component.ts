@@ -8,14 +8,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TsInputFileComponent implements OnInit {
   constructor() { }
   @Input() maxFileSize;
+  @Input() uploadComplete: boolean;
+  @Input() savedFile: string;
+  @Input() acceptedFormats: string;
+  @Output() fileValueChangeEvent = new EventEmitter<any>();
+  stopUploadBar = false;
   uploadPercentage: number;
   uploadedFile: any;
   uploadedFileName: string;
-  @Input() uploadComplete: boolean;
-  @Output() fileValueChangeEvent = new EventEmitter<any>();
-  stopUploadBar = false;
-  @Input() savedFile: string;
-  @Input() acceptedFormats: string;
+  fileIconPath = './assets/images/multi-file.svg';
+  deleteIconPath = './assets/images/cancel.svg';
 
   ngOnInit(): void {
     if (this.savedFile) {
