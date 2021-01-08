@@ -1,0 +1,77 @@
+@import '../../../../../assets/scss/mat-palette';
+
+.ts-file{
+    input[type='file'] {
+        display: none;
+    }
+
+    &-btn {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        border: 1px solid map-get($ts-purple, 500);
+        border-radius: 3px;
+        color: map-get($ts-purple, 500);
+        display: inline-block;
+        padding: 0.4rem 1.5rem;
+        font-weight: bold;
+    }
+
+    &-progress{
+        height: 5rem;
+        margin-top: 1.5rem;
+        background-color: #F5F5F5;
+        padding: 15px;
+        border-radius: 2px;
+        display: flex;
+        font-size: 15px;
+        cursor: default; 
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-progress-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.4rem;
+        width:100%;
+    }
+
+    progress {
+        border-radius: 2px; 
+        margin-top: 0.5rem;
+        width :100%;
+    }
+
+    progress::-webkit-progress-bar {
+        background-color: rgba(126,211,33, 0.2);
+        border-radius: 2px;
+        height: 5px;
+    }
+
+    progress::-webkit-progress-value {
+        background-color: rgb(126,211,33);
+        border-radius: 2px;
+        height: 5px;
+    }
+
+    .file-icon{
+        margin-right: 1rem;
+    }
+
+    .delete-icon{
+        height: 1.5rem;
+        cursor: pointer;
+        margin-left: 1.5rem;
+    }
+
+    &-info{
+        display: flex;
+        width:100%;
+        align-items: center;
+    }
+}
+
+
+
