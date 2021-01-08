@@ -12,8 +12,6 @@ export class TsInputFileComponent implements OnInit {
   @Input() preUploadedFile: string;
   @Input() acceptedFormats: string;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
-  @Input() fileIconPath: string;
-  @Input() deleteIconPath: string;
   stopUploadBar = false;
   uploadPercentage: number;
   uploadedFile: any;

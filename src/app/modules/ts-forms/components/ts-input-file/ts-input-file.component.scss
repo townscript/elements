@@ -1,7 +1,7 @@
 @import '../../../../../assets/scss/mat-palette';
 
 .ts-file{
-    input[type="file"] {
+    input[type='file'] {
         display: none;
     }
 
@@ -68,7 +68,8 @@
 
     &-info{
         display: flex;
-        width:100%
+        width:100%;
+        align-items: center;
     }
 }
 
