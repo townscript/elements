@@ -41,7 +41,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
             return;
         }
         if (this.maxHeight === 0) {
-            this.maxHeight = this.childEl.scrollHeight;
+            this.maxHeight = this.childEl.scrollHeight ? this.childEl.scrollHeight : 10000;
         } else {
             this.maxHeight = 0;
         }
