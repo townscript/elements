@@ -8,6 +8,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
     private maxHeight = 0;
     private _open = false;
     private childEl: HTMLElement;
+    @Input() transitionTime = '.4s';
 
     constructor(private elRef: ElementRef) { }
     @Input()
@@ -28,7 +29,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
         }
         this.childEl = this.elRef.nativeElement.childNodes[0];
         this.childEl.style.overflow = 'hidden';
-        this.childEl.style.transition = 'max-height .4s ease';
+        this.childEl.style.transition = 'max-height ' + this.transitionTime + ' ease-in-out';
         this.childEl.style.maxHeight = '0';
         if (this.open) {
             this.toggleView();
@@ -40,7 +41,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
             return;
         }
         if (this.maxHeight === 0) {
-            this.maxHeight = 1000000; // this.childEl.scrollHeight;
+            this.maxHeight = this.childEl.scrollHeight ? this.childEl.scrollHeight : 10000;
         } else {
             this.maxHeight = 0;
         }
