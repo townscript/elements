@@ -1,5 +1,5 @@
 <mat-form-field class="ts-contact" [floatLabel]="floatLabel" [hideRequiredMarker]="!required">
-  <input matInput type="number" [placeholder]="placeholder" [required]="required" [disabled]="disabled" [name]="name"
+  <input matInput type="tel" [placeholder]="placeholder" [required]="required" [disabled]="disabled" [name]="name"
     (blur)="onBlur()" #contact [pattern]="pattern" [(ngModel)]="contactValue" #inputModelRef="ngModel"
     (countrychange)="onCountryChange($event.target.value)" trim="blur" appContactValidate>
   <mat-error *ngIf="inputModelRef?.invalid && (inputModelRef?.dirty || inputModelRef?.touched)">
