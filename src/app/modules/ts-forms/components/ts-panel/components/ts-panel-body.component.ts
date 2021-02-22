@@ -8,7 +8,7 @@ export class TsPanelBodyComponent implements AfterContentInit {
     private maxHeight = 0;
     private _open = false;
     private childEl: HTMLElement;
-    @Input() transitionTime = '.8s';
+    @Input() transitionTime = '.4s';
 
     constructor(private elRef: ElementRef) { }
     @Input()
@@ -41,8 +41,8 @@ export class TsPanelBodyComponent implements AfterContentInit {
             return;
         }
         if (this.maxHeight === 0) {
-            //this.maxHeight = this.childEl.scrollHeight ? this.childEl.scrollHeight : 10000;
-            this.maxHeight = 10_000;
+            this.maxHeight = this.childEl.scrollHeight;
+            //this.maxHeight = 1000;
         } else {
             this.maxHeight = 0;
         }
