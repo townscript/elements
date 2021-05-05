@@ -76,6 +76,9 @@ export class TsPanelBodyComponent implements AfterContentInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this.observer.disconnect();
+        if (this.observer) {
+            this.observer.disconnect();
+        }
+
     }
 }
