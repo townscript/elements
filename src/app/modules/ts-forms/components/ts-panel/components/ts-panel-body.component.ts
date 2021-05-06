@@ -1,4 +1,5 @@
-import { Component, AfterContentInit, ElementRef, Input, OnDestroy } from '@angular/core';
+import { Component, AfterContentInit, ElementRef, Input, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
     selector: 'ts-panel-body',
@@ -12,7 +13,12 @@ export class TsPanelBodyComponent implements AfterContentInit, OnDestroy {
 
     private observer: MutationObserver;
 
-    constructor(private elRef: ElementRef) { }
+    constructor(private elRef: ElementRef,
+        @Inject(PLATFORM_ID) private readonly platformId) {
+        if (isPlatformBrowser(platformId)) {
+            this.observer = new MutationObserver(this.observerChanges);
+        }
+    }
     @Input()
     set open(val: boolean) {
         this._open = val;
@@ -33,7 +39,6 @@ export class TsPanelBodyComponent implements AfterContentInit, OnDestroy {
         this.childEl.style.overflow = 'hidden';
         this.childEl.style.transition = 'max-height ' + this.transitionTime + ' ease-in-out';
         this.childEl.style.maxHeight = '0';
-        this.observer = new MutationObserver(this.observerChanges);
         if (this.open) {
             this.toggleView();
         }
@@ -65,11 +70,16 @@ export class TsPanelBodyComponent implements AfterContentInit, OnDestroy {
         if (this.maxHeight === 0) {
             this.maxHeight = this.childEl.scrollHeight;
             this.childEl.style.maxHeight = this.maxHeight + 'px';
-            this.observer.observe(this.childEl, {
-                childList: true, subtree: true
-            });
+            if (this.observer) {
+                this.observer.observe(this.childEl, {
+                    childList: true, subtree: true
+                });
+            }
+
         } else {
-            this.observer.disconnect();
+            if (this.observer) {
+                this.observer.disconnect();
+            }
             this.maxHeight = 0;
             this.childEl.style.maxHeight = this.maxHeight + 'px';
         }
@@ -79,6 +89,5 @@ export class TsPanelBodyComponent implements AfterContentInit, OnDestroy {
         if (this.observer) {
             this.observer.disconnect();
         }
-
     }
 }
