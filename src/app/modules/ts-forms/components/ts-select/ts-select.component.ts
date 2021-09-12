@@ -48,4 +48,5 @@ export class TsSelectComponent extends TsControlValueAccessor implements OnInit 
 export interface Option {
   text: string;
   value: any;
+  valid?: boolean;
 }
