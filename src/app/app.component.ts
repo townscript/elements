@@ -73,9 +73,9 @@ export class AppComponent implements OnInit {
   mySlidetoggleVal = true;
 
   constructor(private readonly _bottomSheet: MatBottomSheet) {
-    let option: Option = { text: 'Male', value: 'Male' };
+    let option: Option = { text: 'Male', value: 'Male', disabled: true };
     this.options.push(option);
-    option = { text: 'Female', value: 'Female' };
+    option = { text: 'Female', value: 'Female', disabled: false };
     this.options.push(option);
     this.myGender = option;
 

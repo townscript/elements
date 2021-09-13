@@ -2,7 +2,8 @@
   <mat-select [placeholder]="placeholder" [required]="required" [(ngModel)]="selectValue" [name]="name"
     (blur)="onBlur()" [disabled]="disabled">
     <mat-option disabled *ngIf="isDefaultRequired">Select</mat-option>
-    <mat-option *ngFor="let option of options" [value]="modelObject ? option : option.value">
+    <mat-option [disabled]="option.disabled" *ngFor="let option of options"
+      [value]="modelObject ? option : option.value">
       {{option.text}}
     </mat-option>
   </mat-select>
