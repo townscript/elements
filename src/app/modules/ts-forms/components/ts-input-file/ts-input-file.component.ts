@@ -1,4 +1,6 @@
+import { Time } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { InputTrimDirective } from 'ng2-trim-directive';
 
 @Component({
   selector: 'ts-input-file',
@@ -11,6 +13,7 @@ export class TsInputFileComponent implements OnInit {
   @Input() uploadComplete: boolean;
   @Input() preUploadedFile: string;
   @Input() acceptedFormats: string;
+  @Input() timeStamp:any;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
   stopUploadBar = false;
   uploadPercentage: number;
