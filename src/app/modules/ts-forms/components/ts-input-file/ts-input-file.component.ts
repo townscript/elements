@@ -13,7 +13,7 @@ export class TsInputFileComponent implements OnInit {
   @Input() uploadComplete: boolean;
   @Input() preUploadedFile: string;
   @Input() acceptedFormats: string;
-  @Input() timeStammp:any;
+  @Input() timeStamp:any;
   @Output() fileValueChangeEvent = new EventEmitter<any>();
   stopUploadBar = false;
   uploadPercentage: number;
