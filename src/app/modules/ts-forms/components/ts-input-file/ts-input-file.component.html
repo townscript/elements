@@ -3,7 +3,7 @@
         <label for="file-upload" class="ts-file-btn">
             Upload File
         </label>
-        <input id="file-upload" type="file" (change)="setUploadedFileValue($event)" accept={{acceptedFormats}} />
+        <input id="{{'file-upload' + timeStamp}}" type="file" (change)="setUploadedFileValue($event)" accept={{acceptedFormats}} />
     </div>
     <div *ngIf="uploadedFile" class="ts-file-progress">
         <div class="ts-file-info">
