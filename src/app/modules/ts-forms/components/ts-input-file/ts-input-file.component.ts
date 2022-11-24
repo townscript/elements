@@ -16,6 +16,7 @@ export class TsInputFileComponent implements OnInit {
   uploadPercentage: number;
   uploadedFile: any;
   uploadedFileName: string;
+  randomStr = (Math.random() + 1).toString(36).substring(7);
 
   ngOnInit(): void {
     if (this.preUploadedFile) {

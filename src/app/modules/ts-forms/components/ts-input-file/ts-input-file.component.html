@@ -1,9 +1,10 @@
 <div class="ts-file">
     <div *ngIf="!uploadedFile">
-        <label for="file-upload" class="ts-file-btn">
+        <label [for]="'file-upload-'+randomStr" class="ts-file-btn">
             Upload File
         </label>
-        <input id="file-upload" type="file" (change)="setUploadedFileValue($event)" accept={{acceptedFormats}} />
+        <input [id]="'file-upload-'+randomStr" type="file" (change)="setUploadedFileValue($event)"
+            accept={{acceptedFormats}} />
     </div>
     <div *ngIf="uploadedFile" class="ts-file-progress">
         <div class="ts-file-info">
