@@ -1,4 +1,11 @@
 <form #formElement="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit(formElement)">
+
+  <ts-input-file maxFileSize="10240" preUploadedFile="" uploadComplete="true"
+    [acceptedFormats]="'image/*,.pdf,.doc,.docx, .txt'"></ts-input-file>
+
+  <ts-input-file maxFileSize="10240" preUploadedFile="" uploadComplete="true"
+    [acceptedFormats]="'image/*,.pdf,.doc,.docx, .txt'"></ts-input-file>
+
   <ts-input-text [autofocus]="true" [placeholder]="'Please enter your name'" [required]="true" [(ngModel)]="myName"
     [name]="'name'" maxlength="100" prefixText="Mr./Mrs./Ms." floatLabel="never">
   </ts-input-text>
