@@ -29,6 +29,9 @@ export class TsInputTextComponent extends TsControlValueAccessor implements OnIn
   @Input() maxlength?: number;
   @Input() minlength?: number;
   @Input() prefixText?: String;
+  @Input() customErrorMsg = 'Please enter valid input type.';
+  @Input() showCheckIcon = false;
+  @Input() preventCopyPaste = false;
 
   ngOnInit() {
     if (this.type === 'email') {
