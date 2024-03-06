@@ -13,7 +13,7 @@
   <input matInput [autofocus]="autofocus" type="email" [placeholder]="placeholder" [required]="required"
     [(ngModel)]="inputTextValue" [name]="name" (blur)="onBlur()" [pattern]="pattern" [maxlength]="maxlength"
     [minlength]="minlength" [disabled]="disabled" [appPreventCopyPaste]="preventCopyPaste" #emailModelRef="ngModel">
-    <img draggable="false" *ngIf="showCheckIcon" matSuffix width="30" height="30" src="../../../../../assets/icons/checked--v1.png" alt="checked"/>
+    <img draggable="false" *ngIf="showCheckIcon" matSuffix width="30" height="30" src="https://townscript-common-resources.s3.ap-south-1.amazonaws.com/checked-icon.png" alt="checked"/>
     <mat-error *ngIf="emailModelRef?.invalid && (emailModelRef?.dirty || emailModelRef?.touched)">
       <span *ngIf="emailModelRef?.errors?.pattern">{{customErrorMsg}}</span>
     </mat-error>
