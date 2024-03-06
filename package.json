@@ -1,12 +1,12 @@
 {
-  "name": "@townscript/elements",
-  "version": "4.1.0",
+  "name": "@swapnil-townscript/elements",
+  "version": "4.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
     "build": "npm run packagr",
     "postbuild": "scss-bundle -c scss-bundle.config.json && npm run currencyCss",
-    "currencyCss": "node_modules/.bin/node-sass src/assets/scss/_currency-symbol.scss dist/currency-symbol.min.css  --output-style compressed",
+    "currencyCss": "node-sass src/assets/scss/_currency-symbol.scss dist/currency-symbol.min.css  --output-style compressed",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
