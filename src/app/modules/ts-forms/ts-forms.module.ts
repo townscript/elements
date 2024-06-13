@@ -39,6 +39,7 @@ import { InputTrimModule } from 'ng2-trim-directive';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { PreventCopyPasteDirective } from './components/ts-input-text/prevent-copy-paste.directive';
 
 @NgModule({
   imports: [
@@ -83,6 +84,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     TsSlideToggleComponent,
     TsSelectEditComponent,
     TsInputFileComponent,
+    PreventCopyPasteDirective
   ],
   exports: [
     TsInputTextComponent,

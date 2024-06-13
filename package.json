@@ -1,12 +1,12 @@
 {
-  "name": "@townscript/elements",
-  "version": "4.0.9",
+  "name": "@swapnil-townscript/elements",
+  "version": "4.1.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
     "build": "npm run packagr",
     "postbuild": "scss-bundle -c scss-bundle.config.json && npm run currencyCss",
-    "currencyCss": "node_modules/.bin/node-sass src/assets/scss/_currency-symbol.scss dist/currency-symbol.min.css  --output-style compressed",
+    "currencyCss": "node-sass src/assets/scss/_currency-symbol.scss dist/currency-symbol.min.css  --output-style compressed",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -28,6 +28,7 @@
     "@angular/router": "^9.1.13",
     "angular-cc-library": "^2.0.1",
     "core-js": "^2.5.4",
+    "decode-uri-component": "^0.2.2",
     "intl-tel-input": "^16.0.5",
     "ng2-trim-directive": "^2.3.2",
     "ngx-autofocus-fix": "^1.0.4",
