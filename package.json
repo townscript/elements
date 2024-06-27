@@ -29,6 +29,7 @@
     "angular-cc-library": "^2.0.1",
     "core-js": "^2.5.4",
     "decode-uri-component": "^0.2.2",
+    "express": "^4.19.2",
     "intl-tel-input": "^16.0.5",
     "ng2-trim-directive": "^2.3.2",
     "ngx-autofocus-fix": "^1.0.4",
